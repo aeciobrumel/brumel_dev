@@ -5,10 +5,10 @@
 @layer base {
   :root {
     color-scheme: dark;
-    --color-primary: 59 130 246;
-    --color-secondary: 99 102 241;
-    --color-accent: 56 189 248;
-    --color-tertiary: 147 197 253;
+    --color-primary: 139 92 246;
+    --color-secondary: 124 58 237;
+    --color-accent: 167 139 250;
+    --color-tertiary: 196 181 253;
   }
   html {
     scroll-behavior: smooth;

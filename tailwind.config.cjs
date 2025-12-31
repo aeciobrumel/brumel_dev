@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        surface: '#0b0f1a',
+        surface: '#0c0c11',
         card: 'rgba(255,255,255,0.04)',
-        outline: 'rgba(148,163,184,0.35)',
+        outline: 'rgba(255,255,255,0.12)',
         accent: withOpacity('--color-accent'),
         primary: withOpacity('--color-primary'),
         secondary: withOpacity('--color-secondary'),
@@ -20,7 +20,7 @@ module.exports = {
         mono: ['JetBrains Mono', 'SFMono-Regular', 'Menlo', 'monospace']
       },
       boxShadow: {
-        glow: '0 10px 50px rgba(124, 255, 225, 0.08)'
+        glow: '0 10px 50px rgba(167, 139, 250, 0.12)'
       },
       backgroundImage: {
         grid: 'linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(180deg, rgba(255,255,255,0.04) 1px, transparent 1px)'

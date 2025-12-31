@@ -9,6 +9,7 @@ import { About } from './sections/About';
 import { Technologies } from './sections/Technologies';
 import { Projects } from './sections/Projects';
 import { Highlights } from './sections/Highlights';
+import { ImpactSection } from './sections/Impact';
 import { ExperienceSection } from './sections/Experience';
 import { Contact } from './sections/Contact';
 import { applyPalette } from './utils/theme';
@@ -18,6 +19,7 @@ const sections = [
   { id: 'about', label: 'Sobre' },
   { id: 'technologies', label: 'Stack' },
   { id: 'projects', label: 'Projetos' },
+  { id: 'impact', label: 'Impacto' },
   { id: 'highlights', label: 'Destaques' },
   { id: 'timeline', label: 'Timeline' },
   { id: 'contact', label: 'Contato' }
@@ -50,6 +52,7 @@ function App() {
         <About profile={portfolioData.profile} />
         <Technologies technologies={portfolioData.technologies} />
         <Projects projects={portfolioData.projects} />
+        <ImpactSection impact={portfolioData.impact} />
         <Highlights highlights={portfolioData.highlights} />
         <ExperienceSection timeline={portfolioData.timeline} />
         <Contact links={portfolioData.profile.links} />

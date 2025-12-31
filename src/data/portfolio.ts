@@ -197,6 +197,42 @@ export const portfolioData: PortfolioData = {
     },
    
   ],
+  impact: {
+    kicker: 'Impacto',
+    title: 'Tecnologia aplicada com responsabilidade',
+    description: 'Casos que conectam entrega técnica com impacto social e cultural.',
+    items: [
+      {
+        title: "D'Boa — criador",
+        subtitle: 'Aplicativo para crises de ansiedade e pânico',
+        description: 'Aplicativo de cartões de enfrentamento para apoiar pessoas em crises de ansiedade e pânico.',
+        highlights: [
+          'Impacto social direto e uso em situações reais de crise.',
+          'Apresentado na Infomatrix Chile, com medalha de ouro e homenagem institucional.',
+          'Reconhecimento público pelo foco em responsabilidade e aplicação prática da tecnologia.'
+        ],
+        links: [
+          { label: 'Ver D’Boa', href: 'https://dboa.com.br/' },
+          { label: 'GitHub', href: 'https://github.com/aeciobrumel/Dboa_app_BETA' }
+        ]
+      },
+      {
+        title: 'Documentário "Do Atlântico ao Pacífico"',
+        subtitle: 'Participação em projeto audiovisual/documental',
+        description: 'Integração em iniciativa de maior alcance, conectando tecnologia a narrativa cultural.',
+        highlights: [
+          'Participação como integrante do documentário em uma produção colaborativa.',
+          'Atuação com equipes multidisciplinares e foco em impacto cultural.',
+          'Evidência de entrega em projetos que cruzam tecnologia e cultura.'
+        ], 
+        links: [
+          { label: 'Ver reportagem', href: 'https://noticiasdaaldeia.com.br/documentario-do-atlantico-ao-pacifico-uma-jornada-cientifica-acompanha-estudantes-gauchos-em-premiacao-internacional/' },
+          { label: 'Ver documentário', href: 'https://www.youtube.com/watch?v=aQW72T84mcs' }
+
+        ]
+      }
+    ]
+  },
   highlights: [
     {
       title: 'Arquitetura',

@@ -47,6 +47,26 @@ export type Highlight = {
   icon: HighlightIcon;
 };
 
+export type ImpactLink = {
+  label: string;
+  href: string;
+};
+
+export type ImpactItem = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  highlights: string[];
+  links?: ImpactLink[];
+};
+
+export type ImpactSectionContent = {
+  kicker: string;
+  title: string;
+  description: string;
+  items: ImpactItem[];
+};
+
 export type TimelineItem = {
   title: string;
   period: string;
@@ -80,6 +100,7 @@ export type PortfolioData = {
   snippet: string[];
   technologies: TechnologyCategory[];
   projects: Project[];
+  impact: ImpactSectionContent;
   highlights: Highlight[];
   timeline: TimelineItem[];
 };
