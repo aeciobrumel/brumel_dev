@@ -12,8 +12,8 @@ export const portfolioData: PortfolioData = {
     avatarUrl: profilePhoto,
     avatarAlt: 'Foto de perfil de Aécio Brumel',
     summary: [
-      'Sou esforçado — o que eu não sei, eu dou um jeito de fazer.',
-      'Sou desenvolvedor fullstack e trabalho principalmente com Laravel no backend e React + TypeScript no frontend.',
+      'Resolvo problemas. Aprendo rápido. Entrego soluções.',
+      'Sou desenvolvedor fullstack, atuando principalmente com Laravel no backend e React + TypeScript no frontend.',
       'Atuo em projetos com regras de negócio reais, buscando entregar soluções funcionais, organizadas e fáceis de evoluir.',
       'Tenho perfil prático: gosto de entender o problema, resolver e fazer funcionar, sempre equilibrando produto e engenharia.'
     ],
@@ -33,7 +33,7 @@ export const portfolioData: PortfolioData = {
   snippet: [
     "const dev = 'Aécio Brumel';",
     "const stack = ['React', 'TypeScript','Laravel',  'Docker'];",
-    "const motto = 'O que eu não sei, eu dou um jeito de fazer.';"
+    "const motto ='Curioso por natureza. Comprometido com a entrega.';"
   ],
   technologies: [
     {
