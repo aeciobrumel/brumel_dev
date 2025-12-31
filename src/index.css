@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --color-primary: 59 130 246;
+    --color-secondary: 99 102 241;
+    --color-accent: 56 189 248;
+    --color-tertiary: 147 197 253;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-surface dark:text-slate-100 antialiased font-sans;
+    background-image: radial-gradient(circle at 20% 20%, rgba(var(--color-accent), 0.08), transparent 25%),
+      radial-gradient(circle at 80% 0%, rgba(var(--color-primary), 0.08), transparent 25%),
+      linear-gradient(120deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(124, 255, 225, 0.2);
+    color: inherit;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-slate-100 dark:ring-offset-surface;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-outline/50 bg-white/70 p-4 shadow-sm backdrop-blur dark:bg-card dark:text-slate-100 dark:shadow-glow sm:p-5;
+  }
+  .pill {
+    @apply rounded-full border border-outline/60 bg-white/70 px-3 py-1 text-sm font-medium text-slate-700 shadow-sm backdrop-blur dark:bg-white/5 dark:text-slate-100;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+}
