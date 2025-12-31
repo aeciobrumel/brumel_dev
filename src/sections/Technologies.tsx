@@ -9,7 +9,7 @@ export function Technologies({ technologies }: { technologies: TechnologyCategor
       <SectionTitle
         kicker="Stack"
         title="Tecnologias que guiam meu código"
-        description="Frontend direto ao ponto, backend pragmático e DevOps o suficiente para entregar com segurança."
+        description="Frontend direto ao ponto, backend pragmático e DevOps."
       />
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

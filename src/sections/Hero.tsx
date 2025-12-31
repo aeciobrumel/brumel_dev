@@ -39,7 +39,7 @@ export function Hero({ profile, snippet }: HeroProps) {
               Olá, eu sou <span className="gradient-text">{profile.name}</span>
             </h1>
             <p className="max-w-xl text-sm text-slate-600 dark:text-slate-300">
-              {profile.role} em {profile.location}. {profile.summary[0]}
+              {profile.role} em {profile.location}
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export function Hero({ profile, snippet }: HeroProps) {
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-outline/60 px-3 py-1 font-medium text-tertiary">
               <TerminalIcon className="h-4 w-4" />
-              Clean code. DX first.
+              Clean code.
             </span>
           </div>
 

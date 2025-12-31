@@ -48,11 +48,11 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
     <header className="fixed inset-x-0 top-0 z-50 border-b border-outline/70 bg-white/80 backdrop-blur-md dark:bg-surface/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3">
         <div className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-slate-100">
-
-          <span className="font-mono text-sm text-slate-600 dark:text-slate-300 sm:text-base">{brand}.tsx</span>
           <span className="rounded-lg bg-gradient-to-r from-primary/40 to-accent/40 px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-accent">
             dev
           </span>
+          <span className="font-mono text-sm text-slate-600 dark:text-slate-300 sm:text-base">{brand}.tsx</span>
+
         </div>
 
         <nav

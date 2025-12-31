@@ -7,7 +7,7 @@ export const portfolioData: PortfolioData = {
     username: 'Brumel',
     role: 'Desenvolvedor Full Stack Jr',
     location: 'Rio Grande do Sul, Brasil',
-    headline: 'Laravel, React, TypeScript, Docker e UI clara',
+    headline: 'Laravel, React, TypeScript, Docker',
     availability: 'Aberto para remoto e freelas',
     avatarUrl: profilePhoto,
     avatarAlt: 'Foto de perfil de Aécio Brumel',
@@ -89,10 +89,10 @@ export const portfolioData: PortfolioData = {
       description: 'Site portfólio minimalista e reutilizavel para devs, foco em tipagem e dark mode.',
       stack: ['React', 'Vite', 'TypeScript', 'Tailwind'],
       highlights: ['Dark mode', 'Scroll suave', 'Componentização'],
-      image: '/project-placeholder.svg',
+      image: '/brumeldev.png',
       links: {
         github: 'https://github.com/aeciobrumel/brumel_dev',
-        demo: 'https://github.com/aeciobrumel/brumel_dev'
+        demo: 'https://brumel.dev'
       }
     },
     {
@@ -118,36 +118,84 @@ export const portfolioData: PortfolioData = {
         demo: 'https://dboa.com.br/'
       }
     },
-    {
-      title: 'desafio-3-semana',
-      description: 'API Laravel + React no front para consumir endpoints e validar fluxo fullstack.',
-      stack: ['Laravel', 'React', 'TypeScript'],
-      highlights: ['Fullstack', 'Consumo de API', 'Clean UI'],
-      image: '/project-placeholder.svg',
+     {
+      title: 'Galeria de fotos',
+      description: 'Galeria responsiva com grid e visualização em destaque para cada imagem.',
+      stack: ['React', 'Vite', 'CSS'],
+      highlights: ['Grid responsivo', 'Gallery', 'Lightbox simples'],
+      image: '/galeria.png',
       links: {
-        github: 'https://github.com/aeciobrumel/desafio-3-semana'
+        github: 'https://github.com/aeciobrumel/galeria-de-fotos',
+        demo: 'https://sunny-brigadeiros-4d4baf.netlify.app/'
       }
     },
-    {
-      title: 'exemplos-com-taiwind',
-      description: 'Coleção de exemplos com Tailwind para acelerar protótipos e ideias.',
-      stack: ['Tailwind', 'React'],
-      highlights: ['Snippets rápidos', 'Layout responsivo', 'Vibe dev'],
-      image: '/project-placeholder.svg',
-      links: {
-        github: 'https://github.com/aeciobrumel/exemplos-com-taiwind'
-      }
-    },
-    {
+     {
       title: 'dark-theme-react',
       description: 'Exemplo de tema escuro em React com toggle e persistência.',
       stack: ['React', 'TypeScript', 'CSS'],
       highlights: ['Dark mode', 'State simples', 'Reutilizável'],
-      image: '/project-placeholder.svg',
+      image: '/darkMode.png',
       links: {
-        github: 'https://github.com/aeciobrumel/dark-theme-react'
+        github: 'https://github.com/aeciobrumel/dark-theme-react',
+        demo: 'https://darkthemer.netlify.app/'
       }
-    }
+    },
+    {
+      title: 'Quiz de Conhecimentos Gerais',
+      description: 'Quiz de conhecimento geral com feedback imediato e layout simples.',
+      stack: ['React', 'Vite', 'TypeScript'],
+      highlights: ['Quiz', 'Feedback rápido', 'Deploy Vercel'],
+      image: '/quizConhecimentos.png',
+      links: {
+        github: 'https://github.com/aeciobrumel/quiz-react',
+        demo: 'https://dynamic-crumble-ef3ab8.netlify.app/'
+      }
+    },
+    {
+      title: 'Compra de Pizzas',
+      description: 'Landing simples simulando compra de pizzas com layout limpo.',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+      highlights: ['UI simples', 'Listagem', 'Deploy Vercel'],
+      image: '/comprasdepizzas.png',
+      links: {
+        github: 'https://github.com/aeciobrumel/projeto-compra-de-pizzas',
+        demo: 'https://comprapizzas.netlify.app/'
+      }
+    },
+    {
+      title: 'Relógio Analógico',
+      description: 'Relógio analógico no navegador, desenhado em canvas.',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+      highlights: ['Canvas', 'Animação', 'Vanilla JS'],
+      image: '/relogioAnalogico.png',
+      links: {
+        github: 'https://github.com/aeciobrumel/relogio-analogico',
+        demo: 'https://relogioanalogicos.netlify.app/'
+      }
+    },
+    {
+      title: 'Quadro de desenho',
+      description: 'Quadro de desenho no browser com seleção de cores.',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+      highlights: ['Canvas', 'Interatividade', 'Vanilla JS'],
+      image: '/quadrodedesenho.png',
+      links: {
+        github: 'https://github.com/aeciobrumel/quadro-de-desenho',
+        demo: 'https://quadrodedesenho.netlify.app'
+      }
+    },
+    {
+      title: 'Exemplos com Tailwind',
+      description: 'Coleção de exemplos com Tailwind para acelerar protótipos e ideias.',
+      stack: ['Tailwind', 'React'],
+      highlights: ['Snippets rápidos', 'Layout responsivo', 'Vibe dev'],
+      image: '/exemplosTaiwind.png',
+      links: {
+        github: 'https://github.com/aeciobrumel/exemplos-com-taiwind',
+        demo: 'https://compexample.netlify.app/'
+      }
+    },
+   
   ],
   highlights: [
     {
