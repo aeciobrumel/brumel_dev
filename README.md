@@ -1,47 +1,60 @@
-# Portfólio Dev (React + TypeScript + Tailwind)
+# Portfólio Reutilizável
 
-Portfólio minimalista com vibe dev, dark-first e responsivo, feito em React + Vite + TypeScript + Tailwind. Conteúdo tipado e vindo de um único arquivo de dados.
+Template de portfólio pessoal reutilizável e fácil de personalizar, pensado para destacar projetos, habilidades e contatos, construído com React e Vite, usando TypeScript e Tailwind CSS.
 
-## Requisitos
+![version](https://img.shields.io/badge/version-0.1.0-blue)
+![status](https://img.shields.io/badge/status-in%20development-yellow)
+![license](https://img.shields.io/badge/license-not%20specified-lightgrey)
+![vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![react](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
-- Node 18+ (recomendado)
-- npm (ou pnpm/yarn, ajustando comandos)
+## Sumário
 
-## Como rodar
+- [Guia de Instalação](#guia-de-instalacao)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Scripts](#scripts)
+- [Contribuição](#contribuicao)
+- [Licença](#licenca)
 
-```bash
-npm install
-npm run dev
-```
+## Guia de Instalação
 
-O Vite sobe em `http://localhost:5173`.
+1. Clone o repositório.
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
+3. Inicie o ambiente de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+4. (Opcional) Gere o build de produção e visualize localmente:
+    ```bash
+    npm run build
+    npm run preview
+    ```
+
+## Tecnologias Utilizadas
+
+- React
+- React DOM
+- Vite
+- TypeScript
+- Tailwind CSS
+- PostCSS
+- Autoprefixer
 
 ## Scripts
 
-- `npm run dev` – ambiente de desenvolvimento com HMR.
-- `npm run build` – build de produção.
-- `npm run preview` – serve o build para inspeção local.
+- `npm run dev` — inicia o servidor de desenvolvimento com Vite.
+- `npm run build` — gera o build de produção.
+- `npm run preview` — serve o build gerado para validação local.
+- `npm run lint` — exibe uma mensagem informando que o lint não está configurado.
 
-## Onde editar conteúdo
+## Contribuição
 
-Tudo fica em `src/data/portfolio.ts` (perfil, stack, projetos, destaques, timeline, snippet do hero). Tipos em `src/types/portfolio.ts`.
-
-Altere a foto em `src/assets/profile.jpg` (há fallback de iniciais AB). Placeholders de imagem de projeto em `public/project-placeholder.svg`.
-
-### Paleta de cores
-- Ajuste as cores principais em `src/data/theme.ts` (formato `\"r g b\"` para primary, secondary, accent).
-- O carregamento aplica as variáveis CSS automaticamente via `applyPalette`.
-
-## Estrutura
-
-- `src/components/` – UI reutilizável (Button, Badge, Card, ProjectCard, SectionTitle, SocialLinks etc.)
-- `src/sections/` – Hero, Sobre, Tecnologias, Projetos, Destaques, Timeline, Contato.
-- `src/hooks/` – `useTheme`, `useActiveSection`.
-- `src/utils/` – helpers (`cn`).
-- `src/types/` – tipagem central (`portfolio.ts`).
-
-## Notas de UX/A11y
-
-- Navbar fixa com scroll suave e seção ativa.
-- Foco visível, aria-label em ícones/links, contraste OK.
-- Dark mode padrão com toggle; imagens com `loading="lazy"` e fallback de avatar.
+1. Faça um fork do projeto.
+2. Crie uma branch com sua feature ou correção (`git checkout -b minha-feature`).
+3. Faça commits claros e objetivos.
+4. Envie o PR descrevendo o que mudou e o porquê.
