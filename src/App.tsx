@@ -5,7 +5,7 @@ import { useActiveSection } from './hooks/useActiveSection';
 import { useTheme } from './hooks/useTheme';
 import { NavBar } from './components/NavBar';
 import { Hero } from './sections/Hero';
-import { About } from './sections/About';
+// import { About } from './sections/About';
 import { Technologies } from './sections/Technologies';
 import { Projects } from './sections/Projects';
 import { Highlights } from './sections/Highlights';
@@ -16,12 +16,9 @@ import { applyPalette } from './utils/theme';
 
 const sections = [
   { id: 'hero', label: 'Início' },
-  { id: 'about', label: 'Sobre' },
   { id: 'technologies', label: 'Stack' },
   { id: 'projects', label: 'Projetos' },
   { id: 'impact', label: 'Impacto' },
-  { id: 'highlights', label: 'Destaques' },
-  { id: 'timeline', label: 'Timeline' },
   { id: 'contact', label: 'Contato' }
 ];
 
@@ -49,7 +46,7 @@ function App() {
 
       <main className="relative z-10 mx-auto max-w-6xl px-4 pb-16">
         <Hero profile={portfolioData.profile} snippet={portfolioData.snippet} />
-        <About profile={portfolioData.profile} />
+        {/* <About profile={portfolioData.profile} /> */}
         <Technologies technologies={portfolioData.technologies} />
         <Projects projects={portfolioData.projects} />
         <ImpactSection impact={portfolioData.impact} />
