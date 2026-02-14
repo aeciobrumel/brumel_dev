@@ -5,7 +5,7 @@ import { useActiveSection } from './hooks/useActiveSection';
 import { useTheme } from './hooks/useTheme';
 import { NavBar } from './components/NavBar';
 import { Hero } from './sections/Hero';
-// import { About } from './sections/About';
+// import { About } from './sections/About'
 import { Technologies } from './sections/Technologies';
 import { Projects } from './sections/Projects';
 import { Highlights } from './sections/Highlights';
