@@ -3,6 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -23,10 +24,30 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Normalize FTP host
+        env:
+          FTP_HOST_RAW: ${{ secrets.FTP_HOST }}
+        run: |
+          FTP_HOST_CLEAN="$(echo "$FTP_HOST_RAW" | tr -d '\r\n' | xargs)"
+          echo "FTP_HOST_CLEAN=$FTP_HOST_CLEAN" >> "$GITHUB_ENV"
+
+      - name: Validate FTP host DNS
+        run: |
+          if [ -z "$FTP_HOST_CLEAN" ]; then
+            echo "Secret FTP_HOST is empty."
+            exit 1
+          fi
+
+          if ! getent hosts "$FTP_HOST_CLEAN" >/dev/null; then
+            echo "Could not resolve FTP_HOST. Use only hostname (example: ftp.seudominio.com)."
+            echo "Do not include protocol, path, or port in FTP_HOST."
+            exit 1
+          fi
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}
+          server: ${{ env.FTP_HOST_CLEAN }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/
