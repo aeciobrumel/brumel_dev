@@ -29,6 +29,10 @@ jobs:
           FTP_HOST_RAW: ${{ secrets.FTP_HOST }}
         run: |
           FTP_HOST_CLEAN="$(echo "$FTP_HOST_RAW" | tr -d '\r\n' | xargs)"
+          FTP_HOST_CLEAN="${FTP_HOST_CLEAN#ftp://}"
+          FTP_HOST_CLEAN="${FTP_HOST_CLEAN#ftps://}"
+          FTP_HOST_CLEAN="${FTP_HOST_CLEAN%%/*}"
+          FTP_HOST_CLEAN="${FTP_HOST_CLEAN%%:*}"
           echo "FTP_HOST_CLEAN=$FTP_HOST_CLEAN" >> "$GITHUB_ENV"
 
       - name: Validate FTP host DNS
@@ -38,8 +42,9 @@ jobs:
             exit 1
           fi
 
-          if ! getent hosts "$FTP_HOST_CLEAN" >/dev/null; then
-            echo "Could not resolve FTP_HOST. Use only hostname (example: ftp.seudominio.com)."
+          if ! getent ahosts "$FTP_HOST_CLEAN" >/dev/null; then
+            echo "Could not resolve FTP_HOST. Use hostname or IP only."
+            echo "Examples: ftp.seudominio.com or 195.200.3.144"
             echo "Do not include protocol, path, or port in FTP_HOST."
             exit 1
           fi
@@ -52,5 +57,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/
           local-dir: dist/
-          protocol: ftp
+          protocol: ftps
           port: 21
