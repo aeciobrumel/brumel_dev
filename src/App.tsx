@@ -45,7 +45,7 @@ function App() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-slate-50 dark:from-accent/10 dark:via-transparent dark:to-surface" aria-hidden />
 
       <main className="relative z-10 mx-auto max-w-6xl px-4 pb-16">
-        <Hero profile={portfolioData.profile} snippet={portfolioData.snippet} />
+        <Hero profile={portfolioData.profile} snippet={portfolioData.snippet} theme={theme} />
         {/* <About profile={portfolioData.profile} /> */}
         <Technologies technologies={portfolioData.technologies} />
         <Projects projects={portfolioData.projects} />

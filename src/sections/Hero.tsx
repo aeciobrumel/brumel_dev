@@ -1,17 +1,24 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { CodeSnippet } from '../components/CodeSnippet';
 import { LocationIcon, SparkleIcon, TerminalIcon } from '../components/Icons';
-import { Profile } from '../types/portfolio';
+import { Profile, Theme } from '../types/portfolio';
 
 interface HeroProps {
   profile: Profile;
   snippet: string[];
+  theme: Theme;
 }
 
-export function Hero({ profile, snippet }: HeroProps) {
+export function Hero({ profile, snippet, theme }: HeroProps) {
   const [hasError, setHasError] = useState(false);
+  const avatarSrc = theme === 'dark' ? (profile.avatarUrlDark ?? profile.avatarUrl) : profile.avatarUrl;
+
+  useEffect(() => {
+    setHasError(false);
+  }, [avatarSrc]);
+
   const initials = useMemo(
     () =>
       profile.name
@@ -64,26 +71,25 @@ export function Hero({ profile, snippet }: HeroProps) {
           </div>
         </div>
 
-        <div className="grid gap-4 md:justify-end">
-          <div className="flex justify-start md:justify-end">
-            <Card className="relative inline-flex items-center justify-center p-3 sm:p-4">
-              <div className="absolute inset-0 animate-pulse rounded-2xl bg-accent/10 blur-2xl" aria-hidden />
+        <div className="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center sm:justify-items-stretch md:grid-cols-1 md:justify-items-end">
+          <div className="flex w-full justify-center sm:justify-start md:justify-end">
+            <Card className="relative inline-flex items-center justify-center p-3 sm:p-4 md:p-5">
               {!hasError ? (
                 <img
-                  src={profile.avatarUrl}
+                  src={avatarSrc}
                   alt={profile.avatarAlt ?? 'Foto de perfil'}
                   onError={() => setHasError(true)}
                   loading="lazy"
-                  className="h-24 w-24 rounded-2xl border border-outline/70 object-cover object-top shadow-xl ring-4 ring-accent/20 sm:h-28 sm:w-28 md:h-36 md:w-36"
+                  className="h-32 w-32 rounded-2xl border border-outline/10 object-cover object-top shadow-2xl ring-8 ring-accent/35 sm:h-40 sm:w-40 md:h-52 md:w-52"
                 />
               ) : (
-                <div className="flex h-24 w-24 items-center justify-center rounded-2xl border border-outline/70 bg-gradient-to-br from-primary/40 to-accent/30 font-semibold text-slate-900 shadow-xl ring-4 ring-accent/20 sm:h-28 sm:w-28 md:h-36 md:w-36">
+                <div className="flex h-32 w-32 items-center justify-center rounded-2xl border border-outline/70 bg-gradient-to-br from-primary/40 to-accent/30 font-semibold text-slate-900 shadow-2xl ring-8 ring-accent/35 sm:h-40 sm:w-40 md:h-52 md:w-52">
                   {initials || 'AB'}
                 </div>
               )}
             </Card>
           </div>
-          <div className="max-w-md">
+          <div className="w-full min-w-0 max-w-sm sm:max-w-md md:max-w-md">
             <CodeSnippet title="stack.ts" lines={snippet} />
           </div>
         </div>

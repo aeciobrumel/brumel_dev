@@ -1,6 +1,6 @@
 import { PortfolioData } from '../types/portfolio';
-import profilePhoto from '../assets/Profile.jpg';
-
+import profilePhoto from '../assets/profile-d.jpeg';
+import profilePhotoDark from '../assets/Profile.jpg';
 export const portfolioData: PortfolioData = {
   profile: {
     name: 'Aécio Brumel',
@@ -10,6 +10,7 @@ export const portfolioData: PortfolioData = {
     headline: 'Laravel, React, TypeScript, Docker',
     availability: 'Aberto para remoto e freelas',
     avatarUrl: profilePhoto,
+    avatarUrlDark: profilePhotoDark,
     avatarAlt: 'Foto de perfil de Aécio Brumel',
     summary: [
       'Resolvo problemas. Aprendo rápido. Entrego soluções.',

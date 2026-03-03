@@ -89,6 +89,7 @@ export type Profile = {
   headline: string;
   availability?: string;
   avatarUrl: string;
+  avatarUrlDark?: string;
   avatarAlt?: string;
   summary: string[];
   approach?: string[];
