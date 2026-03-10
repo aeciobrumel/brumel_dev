@@ -29,6 +29,7 @@ jobs:
           FTP_HOST_RAW: ${{ secrets.FTP_HOST }}
           FTP_PORT_RAW: ${{ secrets.FTP_PORT }}
           FTP_PROTOCOL_RAW: ${{ secrets.FTP_PROTOCOL }}
+          FTP_SERVER_DIR_RAW: ${{ secrets.FTP_SERVER_DIR }}
         run: |
           FTP_TARGET="$(echo "$FTP_HOST_RAW" | tr -d '\r\n' | xargs)"
           FTP_TARGET="${FTP_TARGET#ftp://}"
@@ -51,9 +52,19 @@ jobs:
             exit 1
           fi
 
+          FTP_SERVER_DIR_CLEAN="$(echo "${FTP_SERVER_DIR_RAW:-./}" | tr -d '\r\n' | xargs)"
+          if [ -z "$FTP_SERVER_DIR_CLEAN" ]; then
+            FTP_SERVER_DIR_CLEAN="./"
+          fi
+          case "$FTP_SERVER_DIR_CLEAN" in
+            */) ;;
+            *) FTP_SERVER_DIR_CLEAN="${FTP_SERVER_DIR_CLEAN}/" ;;
+          esac
+
           echo "FTP_HOST_CLEAN=$FTP_HOST_CLEAN" >> "$GITHUB_ENV"
           echo "FTP_PORT_CLEAN=$FTP_PORT_CLEAN" >> "$GITHUB_ENV"
           echo "FTP_PROTOCOL_CLEAN=$FTP_PROTOCOL_CLEAN" >> "$GITHUB_ENV"
+          echo "FTP_SERVER_DIR_CLEAN=$FTP_SERVER_DIR_CLEAN" >> "$GITHUB_ENV"
 
       - name: Validate FTP host DNS
         run: |
@@ -75,7 +86,7 @@ jobs:
           server: ${{ env.FTP_HOST_CLEAN }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/
+          server-dir: ${{ env.FTP_SERVER_DIR_CLEAN }}
           local-dir: dist/
           protocol: ${{ env.FTP_PROTOCOL_CLEAN }}
           port: ${{ env.FTP_PORT_CLEAN }}
