@@ -85,6 +85,39 @@ export const portfolioData: PortfolioData = {
     }
   ],
   projects: [
+{
+  title: 'jogo_da_memoria',
+  description: 'Jogo da memória interativo com foco em lógica, responsividade e experiência do usuário.',
+  stack: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
+  highlights: ['Lógica de cartas', 'Responsivo', 'Interface interativa'],
+  image: '/jogodamemoria.png',
+  links: {
+    github: 'https://github.com/aeciobrumel/memory-game',
+    demo: 'https://jogodamemorias.netlify.app/'
+  }
+},
+{
+  title: 'calculadora_imc',
+  description: 'Calculadora de IMC com visual moderno, validação de dados e exibição clara dos resultados.',
+  stack: ['Next.js', 'TypeScript', 'Tailwind'],
+  highlights: ['Cálculo automático', 'Validação de campos', 'UI limpa'],
+  image: '/calc-imc.png',
+  links: {
+    github: 'https://github.com/aeciobrumel/calculadora-imc',
+    demo: 'https://calcimccalc.netlify.app/'
+  }
+},
+{
+  title: 'loja_shadcn',
+  description: 'Loja virtual com interface moderna usando shadcn/ui e redirecionamento de pedidos direto para o WhatsApp.',
+  stack: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui'],
+  highlights: ['Catálogo de produtos', 'UI com shadcn', 'Pedido via WhatsApp'],
+  image: '/loja-shadcn.png',
+  links: {
+    github: 'https://github.com/aeciobrumel/loja-com-shadcnui',
+    demo: 'https://lojashadcn.netlify.app/'
+  }
+},
     {
       title: 'brumel_dev',
       description: 'Site portfólio minimalista e reutilizavel para devs, foco em tipagem e dark mode.',
