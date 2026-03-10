@@ -24,16 +24,36 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Normalize FTP host
+      - name: Normalize FTP connection settings
         env:
           FTP_HOST_RAW: ${{ secrets.FTP_HOST }}
+          FTP_PORT_RAW: ${{ secrets.FTP_PORT }}
+          FTP_PROTOCOL_RAW: ${{ secrets.FTP_PROTOCOL }}
         run: |
-          FTP_HOST_CLEAN="$(echo "$FTP_HOST_RAW" | tr -d '\r\n' | xargs)"
-          FTP_HOST_CLEAN="${FTP_HOST_CLEAN#ftp://}"
-          FTP_HOST_CLEAN="${FTP_HOST_CLEAN#ftps://}"
-          FTP_HOST_CLEAN="${FTP_HOST_CLEAN%%/*}"
-          FTP_HOST_CLEAN="${FTP_HOST_CLEAN%%:*}"
+          FTP_TARGET="$(echo "$FTP_HOST_RAW" | tr -d '\r\n' | xargs)"
+          FTP_TARGET="${FTP_TARGET#ftp://}"
+          FTP_TARGET="${FTP_TARGET#ftps://}"
+          FTP_TARGET="${FTP_TARGET%%/*}"
+
+          FTP_HOST_CLEAN="$FTP_TARGET"
+          FTP_PORT_CLEAN="$(echo "${FTP_PORT_RAW:-}" | tr -d '\r\n' | xargs)"
+          if [ -z "$FTP_PORT_CLEAN" ] && [[ "$FTP_TARGET" == *:* ]]; then
+            FTP_PORT_CLEAN="${FTP_TARGET##*:}"
+            FTP_HOST_CLEAN="${FTP_TARGET%:*}"
+          fi
+          if [ -z "$FTP_PORT_CLEAN" ]; then
+            FTP_PORT_CLEAN=21
+          fi
+
+          FTP_PROTOCOL_CLEAN="$(echo "${FTP_PROTOCOL_RAW:-ftps}" | tr -d '\r\n' | xargs | tr '[:upper:]' '[:lower:]')"
+          if [ "$FTP_PROTOCOL_CLEAN" != "ftp" ] && [ "$FTP_PROTOCOL_CLEAN" != "ftps" ]; then
+            echo "Invalid FTP_PROTOCOL. Use ftp or ftps."
+            exit 1
+          fi
+
           echo "FTP_HOST_CLEAN=$FTP_HOST_CLEAN" >> "$GITHUB_ENV"
+          echo "FTP_PORT_CLEAN=$FTP_PORT_CLEAN" >> "$GITHUB_ENV"
+          echo "FTP_PROTOCOL_CLEAN=$FTP_PROTOCOL_CLEAN" >> "$GITHUB_ENV"
 
       - name: Validate FTP host DNS
         run: |
@@ -45,7 +65,7 @@ jobs:
           if ! getent ahosts "$FTP_HOST_CLEAN" >/dev/null; then
             echo "Could not resolve FTP_HOST. Use hostname or IP only."
             echo "Examples: ftp.seudominio.com or 195.200.3.144"
-            echo "Do not include protocol, path, or port in FTP_HOST."
+            echo "FTP_HOST may optionally include :port, or you can set FTP_PORT separately."
             exit 1
           fi
 
@@ -57,5 +77,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: public_html/
           local-dir: dist/
-          protocol: ftps
-          port: 21
+          protocol: ${{ env.FTP_PROTOCOL_CLEAN }}
+          port: ${{ env.FTP_PORT_CLEAN }}
