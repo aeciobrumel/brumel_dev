@@ -1,4 +1,5 @@
 import { Card } from '../components/Card';
+import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
 import { TimelineItem } from '../components/TimelineItem';
 import { TimelineItem as TimelineItemType } from '../types/portfolio';
@@ -14,8 +15,10 @@ export function ExperienceSection({ timeline }: { timeline: TimelineItemType[] }
 
       <Card>
         <div className="relative space-y-6 border-l border-outline/60 pl-6">
-          {timeline.map((item) => (
-            <TimelineItem key={`${item.title}-${item.period}`} item={item} />
+          {timeline.map((item, index) => (
+            <ScrollReveal key={`${item.title}-${item.period}`} delay={index * 50}>
+              <TimelineItem item={item} />
+            </ScrollReveal>
           ))}
         </div>
       </Card>

@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     role: 'Desenvolvedor Full Stack Jr',
     location: 'Rio Grande do Sul, Brasil',
     headline: 'Laravel, React, TypeScript, Docker',
-    availability: 'Aberto para remoto e freelas',
+    availability: 'freelas',
     avatarUrl: profilePhoto,
     avatarUrlDark: profilePhotoDark,
     avatarAlt: 'Foto de perfil de Aécio Brumel',
