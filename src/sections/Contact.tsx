@@ -3,6 +3,7 @@ import { Button } from '../components/Button';
 import { SocialLinks } from '../components/SocialLinks';
 import { MailIcon } from '../components/Icons';
 import { SocialLinks as SocialLinksType } from '../types/portfolio';
+import { getEmailComposeHref } from '../utils/email';
 
 export function Contact({ links }: { links: SocialLinksType }) {
   return (
@@ -20,7 +21,8 @@ export function Contact({ links }: { links: SocialLinksType }) {
             Envie contexto, timelines e stack atual. Eu respondo rápido e posso sugerir caminhos técnicos.
           </p>
           <Button
-            href={`mailto:${links.email}`}
+            href={getEmailComposeHref(links.email)}
+            target="_blank"
             iconLeft={<MailIcon className="h-4 w-4" />}
             className="bg-none bg-primary hover:bg-primary/90"
           >

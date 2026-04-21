@@ -78,13 +78,24 @@ export function Projects({ projects }: { projects: Project[] }) {
     }
 
     return (
-      <div
+      <article
         key={`placeholder-${safePage}-${index}`}
         aria-hidden="true"
-        className={`h-full rounded-xl border border-transparent ${
-          variant === 'featured' ? 'min-h-[24rem]' : 'min-h-[22.5rem]'
+        className={`h-full overflow-hidden rounded-xl border border-slate-200/60 bg-[#f9fafe] dark:border-white/10 dark:bg-[#0a1221] ${
+          variant === 'featured' ? 'flex flex-col' : 'flex min-h-[20rem] flex-col'
         }`}
-      />
+      >
+        <div className="aspect-[16/9] w-full animate-pulse bg-slate-300/35 dark:bg-slate-700/35" />
+        <div className="flex flex-1 flex-col gap-3 p-4">
+          <div className="h-5 w-3/4 animate-pulse rounded bg-slate-300/35 dark:bg-slate-700/35" />
+          <div className="h-4 w-full animate-pulse rounded bg-slate-300/30 dark:bg-slate-700/30" />
+          <div className="h-4 w-5/6 animate-pulse rounded bg-slate-300/30 dark:bg-slate-700/30" />
+          <div className="mt-auto flex gap-2 pt-1">
+            <div className="h-10 w-24 animate-pulse rounded-lg bg-slate-300/35 dark:bg-slate-700/35" />
+            <div className="h-10 w-24 animate-pulse rounded-lg bg-slate-300/25 dark:bg-slate-700/25" />
+          </div>
+        </div>
+      </article>
     );
   };
 

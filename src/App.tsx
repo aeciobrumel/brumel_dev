@@ -8,7 +8,6 @@ import { Hero } from './sections/Hero';
 // import { About } from './sections/About';
 import { Technologies } from './sections/Technologies';
 import { Projects } from './sections/Projects';
-import { Highlights } from './sections/Highlights';
 import { ImpactSection } from './sections/Impact';
 import { ExperienceSection } from './sections/Experience';
 import { Contact } from './sections/Contact';
@@ -20,7 +19,6 @@ import { cn } from './utils/cn';
 
 const sections = [
   { id: 'hero', label: 'Início' },
-  { id: 'technologies', label: 'Stack' },
   { id: 'projects', label: 'Projetos' },
   { id: 'impact', label: 'Impacto' },
   { id: 'contact', label: 'Contato' }
@@ -88,18 +86,17 @@ function App() {
 
       <main className="relative z-10 pb-16">
         <SectionBlock tone="base" className="!pb-0 md:!pb-0">
-          <Hero profile={portfolioData.profile} snippet={portfolioData.snippet} theme={theme} />
-          <Technologies technologies={portfolioData.technologies} />
+          <Hero profile={portfolioData.profile} theme={theme} />
         </SectionBlock>
         {/* <About profile={portfolioData.profile} /> */}
         <SectionBlock tone="accent" className="!pt-0 md:!pt-0 !bg-[#dce7ff] dark:!bg-[#111a2d]">
           <Projects projects={portfolioData.projects} />
         </SectionBlock>
         <SectionBlock tone="base">
-          <ImpactSection impact={portfolioData.impact} />
+          <Technologies technologies={portfolioData.technologies} />
         </SectionBlock>
-        <SectionBlock tone="panel" className="!bg-primary dark:!bg-[#111a2d]">
-          <Highlights highlights={portfolioData.highlights} />
+        <SectionBlock tone="base">
+          <ImpactSection impact={portfolioData.impact} />
         </SectionBlock>
         <SectionBlock tone="accent">
           <ExperienceSection timeline={portfolioData.timeline} />

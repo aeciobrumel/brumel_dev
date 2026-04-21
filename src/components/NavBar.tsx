@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { SocialLinks, Theme } from '../types/portfolio';
 import { cn } from '../utils/cn';
+import { getEmailComposeHref } from '../utils/email';
 import { GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon, MoonIcon, SunIcon } from './Icons';
 import { Button } from './Button';
 
@@ -78,7 +79,8 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
           <Button
             variant="ghost"
             className="hidden md:inline-flex"
-            href={`mailto:${links.email}`}
+            href={getEmailComposeHref(links.email)}
+            target="_blank"
             aria-label="Enviar email"
             iconLeft={<MailIcon className="h-4 w-4" />}
           >
@@ -165,7 +167,9 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
         </nav>
         <div className="mt-3 flex flex-wrap gap-2">
           <a
-            href={`mailto:${links.email}`}
+            href={getEmailComposeHref(links.email)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg border border-outline/70 px-3 py-2 text-slate-700 transition hover:border-accent hover:text-accent dark:text-slate-200"
             aria-label="Enviar email"
             onClick={handleNavClick}

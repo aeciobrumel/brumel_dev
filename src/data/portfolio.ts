@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
   profile: {
     name: 'Aécio Brumel',
     username: 'Brumel',
-    role: 'Desenvolvedor Full Stack Jr',
+    role: 'Desenvolvedor Full Stack',
     location: 'Rio Grande do Sul, Brasil',
     headline: 'Laravel, React, TypeScript, Docker',
     availability: 'freelas',
@@ -87,7 +87,7 @@ export const portfolioData: PortfolioData = {
   projects: [
 {
   title: 'jogo_da_memoria',
-  description: 'Jogo da memória interativo com foco em lógica, responsividade e experiência do usuário.',
+  description: 'Jogo da memória com interface responsiva e lógica de cartas voltada para uma experiência simples e fluida.',
   stack: ['React', 'Next.js', 'TypeScript', 'Tailwind'],
   highlights: ['Lógica de cartas', 'Responsivo', 'Interface interativa'],
   image: '/jogodamemoria.png',
@@ -98,7 +98,7 @@ export const portfolioData: PortfolioData = {
 },
 {
   title: 'calculadora_imc',
-  description: 'Calculadora de IMC com visual moderno, validação de dados e exibição clara dos resultados.',
+  description: 'Calculadora de IMC com validação de dados e resultado exibido de forma clara em poucos passos.',
   stack: ['Next.js', 'TypeScript', 'Tailwind'],
   highlights: ['Cálculo automático', 'Validação de campos', 'UI limpa'],
   image: '/calc-imc.png',
@@ -109,7 +109,7 @@ export const portfolioData: PortfolioData = {
 },
 {
   title: 'loja_shadcn',
-  description: 'Loja virtual com interface moderna usando shadcn/ui e redirecionamento de pedidos direto para o WhatsApp.',
+  description: 'Loja virtual com catálogo de produtos e pedido enviado direto para o WhatsApp.',
   stack: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui'],
   highlights: ['Catálogo de produtos', 'UI com shadcn', 'Pedido via WhatsApp'],
   image: '/loja-shadcn.png',
@@ -120,7 +120,7 @@ export const portfolioData: PortfolioData = {
 },
     {
       title: 'brumel_dev',
-      description: 'Site portfólio minimalista e reutilizavel para devs, foco em tipagem e dark mode.',
+      description: 'Portfólio pessoal com navegação simples, dark mode e estrutura reutilizável para outros devs.',
       stack: ['React', 'Vite', 'TypeScript', 'Tailwind'],
       highlights: ['Dark mode', 'Scroll suave', 'Componentização'],
       image: '/brumeldev.png',
@@ -131,7 +131,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Dboa_app_BETA (Demonstração Mobile)',
-      description: 'Web App para conduzir crise de ansiedade. Medalha de ouro na Infomatrix Chile, Bronze na Infomatrix Brasil e certificado 2x para Mostratec.',
+      description: 'Aplicativo para apoio em crises de ansiedade, com fluxo guiado e reconhecimento em feiras de inovação.',
       stack: ['React Native', 'Expo', 'Firebase'],
       highlights: ['Guided flow', 'Feedback ao usuário', 'Pitch premiado'],
       image:  '/dboaapp.png',
@@ -142,7 +142,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'De_Boa_Site',
-      description: 'Landing page do projeto De Boa, para apresentar o app e captação de interessados com redirecionamento para apk android.',
+      description: 'Landing page criada para apresentar o projeto D\'Boa e direcionar interessados para baixar o app.',
       stack: ['React', 'Tailwind'],
       highlights: ['Landing otimizada', 'Conteúdo claro', 'CTA visível'],
       image:  '/dboa_site.png',
@@ -154,7 +154,7 @@ export const portfolioData: PortfolioData = {
     },
      {
       title: 'Galeria de fotos',
-      description: 'Galeria responsiva com grid e visualização em destaque para cada imagem.',
+      description: 'Galeria responsiva com grid organizado e visualização ampliada das imagens.',
       stack: ['React', 'Vite', 'CSS'],
       highlights: ['Grid responsivo', 'Gallery', 'Lightbox simples'],
       image: '/galeria.png',
@@ -165,7 +165,7 @@ export const portfolioData: PortfolioData = {
     },
      {
       title: 'dark-theme-react',
-      description: 'Exemplo de tema escuro em React com toggle e persistência.',
+      description: 'Exemplo de interface com tema escuro, alternância visual e persistência da escolha do usuário.',
       stack: ['React', 'TypeScript', 'CSS'],
       highlights: ['Dark mode', 'State simples', 'Reutilizável'],
       image: '/darkMode.png',
@@ -176,7 +176,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Quiz de Conhecimentos Gerais',
-      description: 'Quiz de conhecimento geral com feedback imediato e layout simples.',
+      description: 'Quiz com perguntas objetivas e feedback imediato para manter a interação rápida.',
       stack: ['React', 'Vite', 'TypeScript'],
       highlights: ['Quiz', 'Feedback rápido', 'Deploy Vercel'],
       image: '/quizConhecimentos.png',
@@ -187,7 +187,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Compra de Pizzas',
-      description: 'Landing simples simulando compra de pizzas com layout limpo.',
+      description: 'Interface de compra de pizzas com listagem de itens e fluxo visual direto.',
       stack: ['HTML', 'CSS', 'JavaScript'],
       highlights: ['UI simples', 'Listagem', 'Deploy Vercel'],
       image: '/comprasdepizzas.png',
@@ -198,7 +198,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Relógio Analógico',
-      description: 'Relógio analógico no navegador, desenhado em canvas.',
+      description: 'Relógio analógico renderizado no navegador com animação contínua em canvas.',
       stack: ['HTML', 'CSS', 'JavaScript'],
       highlights: ['Canvas', 'Animação', 'Vanilla JS'],
       image: '/relogioAnalogico.png',
@@ -209,7 +209,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Quadro de desenho',
-      description: 'Quadro de desenho no browser com seleção de cores.',
+      description: 'Quadro de desenho no navegador com seleção de cores e interação em tempo real.',
       stack: ['HTML', 'CSS', 'JavaScript'],
       highlights: ['Canvas', 'Interatividade', 'Vanilla JS'],
       image: '/quadrodedesenho.png',
@@ -220,7 +220,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Exemplos com Tailwind',
-      description: 'Coleção de exemplos com Tailwind para acelerar protótipos e ideias.',
+      description: 'Coleção de interfaces com Tailwind para testar ideias e acelerar protótipos.',
       stack: ['Tailwind', 'React'],
       highlights: ['Snippets rápidos', 'Layout responsivo', 'Vibe dev'],
       image: '/exemplosTaiwind.png',
@@ -233,17 +233,17 @@ export const portfolioData: PortfolioData = {
   ],
   impact: {
     kicker: 'Impacto',
-    title: 'Tecnologia aplicada com responsabilidade',
-    description: 'Casos que conectam entrega técnica com impacto social e cultural.',
+    title: 'Projetos com resultado real',
+    description: 'Trabalhos em que a tecnologia gerou uso prático, reconhecimento e alcance fora do código.',
     items: [
       {
-        title: "D'Boa — criador",
+        title: "D'Boa: app para crise de ansiedade",
         subtitle: 'Aplicativo para crises de ansiedade e pânico',
-        description: 'Aplicativo de cartões de enfrentamento para apoiar pessoas em crises de ansiedade e pânico.',
+        description: 'App criado para ajudar pessoas em momentos de crise com um fluxo simples e direto de apoio.',
         highlights: [
-          'Impacto social direto e uso em situações reais de crise.',
-          'Apresentado na Infomatrix Chile, com medalha de ouro e homenagem institucional.',
-          'Reconhecimento público pelo foco em responsabilidade e aplicação prática da tecnologia.'
+          'Uso prático em um problema real de saúde emocional.',
+          'Medalha de ouro na Infomatrix Chile e bronze na etapa Brasil.',
+          'Projeto reconhecido pelo impacto e pela aplicação clara da tecnologia.'
         ],
         links: [
           { label: 'Ver D’Boa', href: 'https://dboa.com.br/' },
@@ -251,13 +251,13 @@ export const portfolioData: PortfolioData = {
         ]
       },
       {
-        title: 'Documentário "Do Atlântico ao Pacífico"',
+        title: 'Documentário: tecnologia em projeto cultural',
         subtitle: 'Participação em projeto audiovisual/documental',
-        description: 'Integração em iniciativa de maior alcance, conectando tecnologia a narrativa cultural.',
+        description: 'Participação em um projeto que conectou tecnologia, pesquisa e produção cultural.',
         highlights: [
-          'Participação como integrante do documentário em uma produção colaborativa.',
-          'Atuação com equipes multidisciplinares e foco em impacto cultural.',
-          'Evidência de entrega em projetos que cruzam tecnologia e cultura.'
+          'Trabalho em equipe dentro de uma produção colaborativa.',
+          'Projeto com alcance público e conexão com contexto educacional e cultural.',
+          'Exemplo de atuação além do código, com entrega em projeto real.'
         ], 
         links: [
           { label: 'Ver reportagem', href: 'https://noticiasdaaldeia.com.br/documentario-do-atlantico-ao-pacifico-uma-jornada-cientifica-acompanha-estudantes-gauchos-em-premiacao-internacional/' },

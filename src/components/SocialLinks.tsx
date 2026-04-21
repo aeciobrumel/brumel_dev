@@ -1,5 +1,6 @@
 import { SocialLinks as SocialLinksType } from '../types/portfolio';
 import { cn } from '../utils/cn';
+import { getEmailComposeHref } from '../utils/email';
 import { GitHubIcon, InstagramIcon, LinkedInIcon, MailIcon } from './Icons';
 
 interface SocialLinksProps {
@@ -43,7 +44,9 @@ export function SocialLinks({ links, className, variant = 'ghost' }: SocialLinks
         <InstagramIcon className="h-4 w-4" /> Instagram
       </a>
       <a
-        href={`mailto:${links.email}`}
+        href={getEmailComposeHref(links.email)}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Email"
         className={cn(base, variant === 'solid' && 'bg-[#eaf1ff]/85 dark:bg-white/5')}
       >
