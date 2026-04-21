@@ -19,7 +19,11 @@ export function Contact({ links }: { links: SocialLinksType }) {
           <p className="text-sm text-slate-600 dark:text-slate-300">
             Envie contexto, timelines e stack atual. Eu respondo rápido e posso sugerir caminhos técnicos.
           </p>
-          <Button href={`mailto:${links.email}`} iconLeft={<MailIcon className="h-4 w-4" />}>
+          <Button
+            href={`mailto:${links.email}`}
+            iconLeft={<MailIcon className="h-4 w-4" />}
+            className="bg-none bg-primary hover:bg-primary/90"
+          >
             Enviar email
           </Button>
         </div>

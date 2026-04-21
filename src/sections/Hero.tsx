@@ -32,10 +32,10 @@ export function Hero({ profile, snippet, theme }: HeroProps) {
   );
 
   return (
-    <section id="hero" className="scroll-mt-24 pt-24 md:pt-32">
+    <section id="hero" className="scroll-mt-24 pt-24 pb-24 md:pt-32">
       <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <div className="space-y-5">
-          <div className="inline-flex items-center gap-2 rounded-full border border-outline/60 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 shadow-sm backdrop-blur dark:bg-white/5 dark:text-slate-300">
+          <div className="inline-flex items-center gap-2 rounded-full border border-outline/60 bg-[#eaf1ff]/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 shadow-sm backdrop-blur dark:bg-white/5 dark:text-slate-300">
             <SparkleIcon className="h-3.5 w-3.5 text-accent" />
             {profile.availability ?? 'Disponível'}
           </div>
@@ -43,7 +43,8 @@ export function Hero({ profile, snippet, theme }: HeroProps) {
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent sm:text-sm">{profile.headline}</p>
             <h1 className="text-3xl font-semibold leading-tight text-slate-900 dark:text-white md:text-4xl">
-              Olá, eu sou <span className="gradient-text">{profile.name}</span>
+              Olá, eu sou{' '}
+              <span className="text-accent">{profile.name}</span>
             </h1>
             <p className="max-w-xl text-sm text-slate-600 dark:text-slate-300">
               {profile.role} em {profile.location}
@@ -83,7 +84,7 @@ export function Hero({ profile, snippet, theme }: HeroProps) {
                   className="h-32 w-32 rounded-2xl border border-outline/10 object-cover object-top shadow-2xl ring-8 ring-accent/35 sm:h-40 sm:w-40 md:h-52 md:w-52"
                 />
               ) : (
-                <div className="flex h-32 w-32 items-center justify-center rounded-2xl border border-outline/70 bg-gradient-to-br from-primary/40 to-accent/30 font-semibold text-slate-900 shadow-2xl ring-8 ring-accent/35 sm:h-40 sm:w-40 md:h-52 md:w-52">
+                <div className="flex h-32 w-32 items-center justify-center rounded-2xl border border-outline/70 bg-accent/25 font-semibold text-slate-900 shadow-2xl ring-8 ring-accent/35 sm:h-40 sm:w-40 md:h-52 md:w-52">
                   {initials || 'AB'}
                 </div>
               )}

@@ -20,7 +20,7 @@ export function SocialLinks({ links, className, variant = 'ghost' }: SocialLinks
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
-        className={cn(base, variant === 'solid' && 'bg-white/70 dark:bg-white/5')}
+        className={cn(base, variant === 'solid' && 'bg-[#eaf1ff]/85 dark:bg-white/5')}
       >
         <GitHubIcon className="h-4 w-4" /> GitHub
       </a>
@@ -29,7 +29,7 @@ export function SocialLinks({ links, className, variant = 'ghost' }: SocialLinks
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
-        className={cn(base, variant === 'solid' && 'bg-white/70 dark:bg-white/5')}
+        className={cn(base, variant === 'solid' && 'bg-[#eaf1ff]/85 dark:bg-white/5')}
       >
         <LinkedInIcon className="h-4 w-4" /> LinkedIn
       </a>
@@ -38,14 +38,14 @@ export function SocialLinks({ links, className, variant = 'ghost' }: SocialLinks
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className={cn(base, variant === 'solid' && 'bg-white/70 dark:bg-white/5')}
+        className={cn(base, variant === 'solid' && 'bg-[#eaf1ff]/85 dark:bg-white/5')}
       >
         <InstagramIcon className="h-4 w-4" /> Instagram
       </a>
       <a
         href={`mailto:${links.email}`}
         aria-label="Email"
-        className={cn(base, variant === 'solid' && 'bg-white/70 dark:bg-white/5')}
+        className={cn(base, variant === 'solid' && 'bg-[#eaf1ff]/85 dark:bg-white/5')}
       >
         <MailIcon className="h-4 w-4" /> Email
       </a>

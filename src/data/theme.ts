@@ -7,8 +7,8 @@ export type Palette = {
 
 // Altere aqui para personalizar o tema (formato "r g b").
 export const palette: Palette = {
-  primary: '139 92 246', // roxo principal
-  secondary: '124 58 237', // roxo profundo
-  accent: '167 139 250', // roxo claro
-  tertiary: '196 181 253' // lilás suave
+  primary: '22 63 120', // azul escuro principal
+  secondary: '18 48 96', // navy profundo
+  accent: '46 105 190', // azul destaque
+  tertiary: '147 181 230' // azul claro suave
 };

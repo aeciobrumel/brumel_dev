@@ -45,10 +45,10 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
   }, [menuOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-outline/70 bg-white/80 backdrop-blur-md dark:bg-surface/80">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-outline/70 bg-[#edf3ff]/90 backdrop-blur-md dark:bg-surface/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-2 sm:px-4 sm:py-3">
         <div className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-slate-100">
-          <span className="rounded-lg bg-gradient-to-r from-primary/40 to-accent/40 px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-accent">
+          <span className="rounded-lg bg-primary px-2 py-1 font-mono text-[11px] uppercase tracking-wide text-white">
             dev
           </span>
           <span className="font-mono text-sm text-slate-600 dark:text-slate-300 sm:text-base">{brand}.tsx</span>
@@ -65,7 +65,7 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
               href={`#${item.id}`}
               className={cn(
                 'rounded-lg px-3 py-2 transition hover:text-accent',
-                activeId === item.id && 'bg-accent/10 text-accent'
+                activeId === item.id && 'bg-primary/15 text-primary'
               )}
               aria-current={activeId === item.id ? 'true' : undefined}
             >
@@ -84,7 +84,7 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
           >
             Contato
           </Button>
-          <div className="flex items-center gap-1 rounded-full border border-outline/70 bg-white/60 px-1.5 py-1 shadow-sm backdrop-blur dark:bg-white/5">
+          <div className="flex items-center gap-1 rounded-full border border-outline/70 bg-[#eaf1ff]/85 px-1.5 py-1 shadow-sm backdrop-blur dark:bg-white/5">
             <div className="hidden items-center gap-1 md:flex">
               <a
                 href={links.github}
@@ -142,7 +142,7 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
       <div
         ref={menuRef}
         className={cn(
-          'md:hidden absolute left-0 right-0 top-full mt-2 border border-outline/50 bg-white/95 px-3 py-3 text-sm shadow-lg backdrop-blur transition-all duration-200 dark:bg-surface/95',
+          'md:hidden absolute left-0 right-0 top-full mt-2 border border-outline/50 bg-[#edf3ff]/95 px-3 py-3 text-sm shadow-lg backdrop-blur transition-all duration-200 dark:bg-surface/95',
           menuOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
         )}
         style={{ zIndex: 60 }}
@@ -155,7 +155,7 @@ export function NavBar({ sections, activeId, onToggleTheme, theme, links, brand 
               onClick={handleNavClick}
               className={cn(
                 'rounded-lg px-3 py-2 text-slate-700 transition hover:bg-accent/10 hover:text-accent dark:text-slate-200',
-                activeId === item.id && 'bg-accent/10 text-accent'
+                activeId === item.id && 'bg-primary/15 text-primary'
               )}
               aria-current={activeId === item.id ? 'true' : undefined}
             >

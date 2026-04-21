@@ -280,7 +280,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'Entrega',
-      description: 'Autodidata e disciplinado. O que não sei, aprendo rápido e entrego.',
+      description: 'Autodidata e disciplinado, com aprendizado contínuo e foco em entregas consistentes.',
       icon: 'delivery'
     }
   ],
