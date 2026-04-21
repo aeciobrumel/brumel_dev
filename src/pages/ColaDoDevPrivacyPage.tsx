@@ -53,27 +53,25 @@ const sections = [
 
 export function ColaDoDevPrivacyPage() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-20" aria-hidden />
-
-      <main className="relative z-10 mx-auto max-w-4xl px-4 py-20">
-        <section className="rounded-[2rem] border border-white/10 bg-slate-900/85 p-8 shadow-2xl backdrop-blur sm:p-12">
+    <div className="min-h-screen bg-[#f4f8ff] text-slate-900 dark:bg-surface dark:text-slate-100">
+      <main className="mx-auto max-w-4xl px-4 py-20">
+        <section className="rounded-[2rem] border border-slate-200/80 bg-[#f7fbff] p-8 shadow-[0_18px_36px_rgba(15,23,42,0.06)] sm:p-12 dark:border-white/10 dark:bg-[#0f1728]">
           <div className="flex flex-wrap items-center gap-3">
             <a
               href="/politica-privacidade"
-              className="inline-flex rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-200 hover:border-accent hover:text-accent"
+              className="inline-flex rounded-full border border-slate-300/80 bg-white/70 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-accent hover:text-accent dark:border-white/15 dark:bg-white/5 dark:text-slate-200"
             >
               Voltar
             </a>
-            <span className="inline-flex rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-sm font-medium text-accent">
+            <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-accent/30 dark:bg-accent/10 dark:text-accent">
               Chrome Extension
             </span>
           </div>
 
           <header className="mt-8 space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Política de privacidade</p>
-            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Cola do Dev</h1>
-            <p className="max-w-3xl text-base leading-7 text-slate-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary dark:text-accent">Política de privacidade</p>
+            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Cola do Dev</h1>
+            <p className="max-w-3xl text-base leading-7 text-slate-600 dark:text-slate-300">
               Política de privacidade e uso de dados da extensão Chrome "Cola do Dev", escrita em português do
               Brasil, com linguagem simples e objetiva para publicação pública.
             </p>
@@ -83,10 +81,10 @@ export function ColaDoDevPrivacyPage() {
             {sections.map((section) => (
               <article
                 key={section.title}
-                className="rounded-3xl border border-white/10 bg-slate-950/70 p-6"
+                className="rounded-3xl border border-slate-200/80 bg-white/75 p-6 dark:border-white/10 dark:bg-[#0a1221]"
               >
-                <h2 className="text-xl font-semibold text-white">{section.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{section.content}</p>
+                <h2 className="text-xl font-semibold text-slate-900 dark:text-white">{section.title}</h2>
+                <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{section.content}</p>
               </article>
             ))}
           </div>
