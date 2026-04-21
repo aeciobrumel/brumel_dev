@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { Project } from '../types/portfolio';
-import { ExternalIcon, GitHubIcon } from './Icons';
+import { ChromeIcon, ExternalIcon, FirefoxIcon, GitHubIcon } from './Icons';
 
 export function ProjectCard({ project, variant = 'regular' }: { project: Project; variant?: 'regular' | 'featured' }) {
   const [imgSrc, setImgSrc] = useState(project.image || '/project-placeholder.svg');
   const isFeatured = variant === 'featured';
+  const ctaClassName =
+    'inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-slate-50 transition-colors md:hover:bg-primary/90';
+  const storeIconClassName = 'h-5 w-5 shrink-0 rounded-full bg-white/95 p-0.5 shadow-sm';
 
   return (
     <article
@@ -46,12 +49,34 @@ export function ProjectCard({ project, variant = 'regular' }: { project: Project
         </div>
 
         <div className="mt-auto flex flex-wrap items-center gap-2 pt-1 text-sm font-semibold">
+          {project.links.chrome && (
+            <a
+              href={project.links.chrome}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaClassName}
+              aria-label={`Chrome Web Store do projeto ${project.title}`}
+            >
+              <ChromeIcon className={storeIconClassName} /> Chrome
+            </a>
+          )}
+          {project.links.firefox && (
+            <a
+              href={project.links.firefox}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ctaClassName}
+              aria-label={`Firefox Add-ons do projeto ${project.title}`}
+            >
+              <FirefoxIcon className={storeIconClassName} /> Firefox
+            </a>
+          )}
           {project.links.demo && (
             <a
               href={project.links.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-slate-50 transition-colors md:hover:bg-primary/90"
+              className={ctaClassName}
               aria-label={`Demo do projeto ${project.title}`}
             >
               <ExternalIcon className="h-4 w-4" /> Ver demo

@@ -36,6 +36,8 @@ export type Project = {
   links: {
     github: string;
     demo?: string;
+    chrome?: string;
+    firefox?: string;
   };
 };
 

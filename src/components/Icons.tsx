@@ -37,6 +37,40 @@ export const ExternalIcon = (props: IconProps) => (
   </svg>
 );
 
+export const ChromeIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" {...props}>
+    <circle cx="12" cy="12" r="11" fill="#ffffff" />
+    <path
+      d="M12 3.2a8.8 8.8 0 0 1 7.62 4.4H12a4.4 4.4 0 0 0-3.81 2.2L5.3 4.77A8.76 8.76 0 0 1 12 3.2Z"
+      fill="#ea4335"
+    />
+    <path
+      d="M5.3 4.77 9.1 11.35A4.4 4.4 0 0 0 12 18.8c1.57 0 3.02-.83 3.81-2.2l-3.86 6.68A8.8 8.8 0 0 1 5.3 4.77Z"
+      fill="#34a853"
+    />
+    <path
+      d="M19.62 7.6H12a4.4 4.4 0 0 1 3.81 6.6l-3.86 6.68a8.8 8.8 0 0 0 7.67-13.28Z"
+      fill="#fbbc05"
+    />
+    <circle cx="12" cy="12" r="4.7" fill="#4285f4" stroke="#ffffff" strokeWidth="1.2" />
+  </svg>
+);
+
+export const FirefoxIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" {...props}>
+    <circle cx="12" cy="12" r="11" fill="#ffffff" />
+    <circle cx="12" cy="12" r="8.2" fill="#312e81" />
+    <path
+      d="M18.8 7.7c-.42-1.93-1.8-3.78-3.82-4.95.2.74.1 1.44-.26 2.14-1.2-1-2.7-1.63-4.28-1.73 1.17 1.08 1.44 2.2 1.25 3.37-2.64.23-4.9 2.02-5.64 4.6-.76 2.68.08 5.54 2.08 7.23 2.13 1.8 5.3 2.2 7.87 1.03 2.62-1.2 4.3-3.92 4.23-6.82-.03-1.85-.76-3.54-1.43-4.87Z"
+      fill="#ff7139"
+    />
+    <path
+      d="M9.35 8.65c-1.63 1.04-2.56 2.86-2.34 4.72.27 2.27 2.22 4.03 4.56 4.16 2.28.12 4.34-1.22 5.17-3.31-.95.56-2.24.65-3.3.2-1.36-.56-2.2-1.77-2.17-3.12.03-1.03.58-1.95 1.42-2.65-.98-.19-2.27-.05-3.34 0Z"
+      fill="#ffb02e"
+    />
+  </svg>
+);
+
 export const SunIcon = (props: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true" {...props}>
     <circle cx="12" cy="12" r="4" />

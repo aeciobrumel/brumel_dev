@@ -85,6 +85,40 @@ export const portfolioData: PortfolioData = {
     }
   ],
   projects: [
+    {
+  title: 'Cola do dev',
+  description: 'Extensão para salvar, organizar e consultar snippets de código no popup do navegador, com busca, filtros e cópia rápida.',
+  stack: ['React', 'TypeScript', 'Tailwind'],
+  highlights: ['Busca e filtros', 'Cópia em um clique'],
+  image: '/coladodev.png',
+  links: {
+    firefox: 'https://addons.mozilla.org/pt-BR/firefox/addon/cola-do-dev/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search',
+    chrome: 'https://chromewebstore.google.com/detail/nafbkgokdbkomhkgdmjjlmkimfnkjeba?utm_source=item-share-cb',
+    github: 'https://github.com/aeciobrumel/memory-game',  }
+},
+{
+  title: 'loja_shadcn',
+  description: 'Loja virtual com catálogo de produtos e pedido enviado direto para o WhatsApp.',
+  stack: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui'],
+  highlights: ['Catálogo de produtos', 'UI com shadcn', 'Pedido via WhatsApp'],
+  image: '/loja-shadcn.png',
+  links: {
+    github: 'https://github.com/aeciobrumel/loja-com-shadcnui',
+    demo: 'https://lojashadcn.netlify.app/'
+  }
+},
+{
+  title: 'O Leão Tá de Olho',
+  description: 'Aplicação para consultar o valor histórico de criptomoedas em BRL e organizar operações como apoio ao Imposto de Renda.',
+  stack: ['React', 'Vite', 'TypeScript', 'Tailwind', 'React Router', 'TanStack Query', 'Zustand'],
+  highlights: ['Cotação histórica em BRL', 'Resumo para IR', 'Dados salvos no navegador'],
+  image: '/oleaotadeolho.png',
+  links: {
+    github: 'https://github.com/aeciobrumel/o-leao-ta-de-olho.git',
+    demo: 'https://oleaotadeolho.com/'
+
+  }
+},
 {
   title: 'jogo_da_memoria',
   description: 'Jogo da memória com interface responsiva e lógica de cartas voltada para uma experiência simples e fluida.',
@@ -107,17 +141,7 @@ export const portfolioData: PortfolioData = {
     demo: 'https://calcimccalc.netlify.app/'
   }
 },
-{
-  title: 'loja_shadcn',
-  description: 'Loja virtual com catálogo de produtos e pedido enviado direto para o WhatsApp.',
-  stack: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui'],
-  highlights: ['Catálogo de produtos', 'UI com shadcn', 'Pedido via WhatsApp'],
-  image: '/loja-shadcn.png',
-  links: {
-    github: 'https://github.com/aeciobrumel/loja-com-shadcnui',
-    demo: 'https://lojashadcn.netlify.app/'
-  }
-},
+
     {
       title: 'brumel_dev',
       description: 'Portfólio pessoal com navegação simples, dark mode e estrutura reutilizável para outros devs.',
