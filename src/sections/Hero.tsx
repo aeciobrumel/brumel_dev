@@ -30,7 +30,7 @@ export function Hero({ profile, theme }: HeroProps) {
   );
 
   return (
-    <section id="hero" className="scroll-mt-14 pt-14 pb-14 md:pt-31">
+    <section id="hero" className="scroll-mt-14 pt-24 pb-14 md:pt-31">
       <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <div className="space-y-5">
           <div className="space-y-3">
