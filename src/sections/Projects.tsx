@@ -100,7 +100,7 @@ export function Projects({ projects }: { projects: Project[] }) {
   };
 
   return (
-    <section id="projects" className="scroll-mt-24 pt-24">
+    <section id="projects" className="scroll-mt-14 pt-14">
       <SectionTitle
         kicker="Projetos"
         title="Builds recentes"
