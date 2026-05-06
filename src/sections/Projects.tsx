@@ -9,7 +9,7 @@ export function Projects({ projects }: { projects: Project[] }) {
   const [columns, setColumns] = useState(3);
   const [featuredWebLayout, setFeaturedWebLayout] = useState(false);
   const [page, setPage] = useState(0);
-  const autoPlayMs = 7000;
+  const autoPlayMs = 12000;
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
