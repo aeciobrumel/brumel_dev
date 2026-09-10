@@ -1,3 +1,21 @@
+# AGENTS.md — brumel_dev
+
+Portfólio pessoal de **Aécio Brumel**. Site estático, **sem backend**, pt-BR fixo.
+
+- **Stack:** Next.js 16 (App Router, `output: "export"`), React 19, TypeScript
+  strict, Tailwind CSS v4 (CSS-first), shadcn/ui (new-york, Phosphor), Zustand,
+  `motion`, Biome/Ultracite, Vitest.
+- **Dados:** módulos estáticos em `src/data/*`, lidos direto por Server Components.
+- **Deploy:** build gera `out/`, publicado por FTP na Hostinger
+  (`.github/workflows/deploy.yml`).
+- **Arquitetura, convenções e "patterns to follow":** veja
+  [`agents/overview.md`](./agents/overview.md).
+
+Comandos: `npm run dev` · `npm run build` (gera `out/`) · `npm run check`
+(Ultracite) · `npm run test` (Vitest) · `npm run fix`.
+
+---
+
 # Ultracite Code Standards
 
 This project uses **Ultracite**, a zero-config preset that enforces strict code quality standards through automated formatting and linting.
