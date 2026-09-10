@@ -1,9 +1,17 @@
 # Migração do brumel_dev para a estrutura do yagrrusso (dados estáticos)
 
-> Documento de orientação. **Não implementar ainda** — este arquivo descreve o alvo, o
-> mapeamento arquivo‑a‑arquivo, as dependências, os snippets de config e a ordem de
-> execução para migrar o portfólio para a arquitetura do `yagrrusso.github.io`,
-> **mantendo os dados 100% estáticos e locais (sem backend, sem GraphQL)**.
+> **Status: IMPLEMENTADO** na branch `feat/estrutura-yagrrusso` (fases 0–11).
+> Fica 12 (polimento Magic UI) como opcional/destacável. Este documento descrevia o
+> alvo, o mapeamento arquivo‑a‑arquivo, as dependências, os snippets de config e a
+> ordem de execução para migrar o portfólio para a arquitetura do
+> `yagrrusso.github.io`, **mantendo os dados 100% estáticos e locais (sem backend,
+> sem GraphQL)** — e agora serve de registro histórico.
+>
+> Diferenças conscientes em relação ao plano: `PALETTE` como `Select` shadcn no
+> header; sections pesadas de interação (carrossel de projetos, marquee de skills)
+> portadas como leaves `"use client"` mais enxutas; `highlights` dobrado dentro de
+> `about-section`; algumas regras do Ultracite relaxadas em `biome.jsonc`
+> (`noJsxPropsBind`, `noBarrelFile`, `useImageSize`).
 
 ---
 
