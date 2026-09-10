@@ -29,7 +29,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Sistemas Operacionais",
     items: [
       { name: "Linux", icon: "linux" },
-      { name: "Windows", icon: "windows11" },
+      { name: "Windows", icon: "windows" },
     ],
   },
   {
@@ -44,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
     title: "Outros",
     items: [
       { name: "Git / GitHub", icon: "github" },
-      { name: "APIs REST", icon: "openapiinitiative" },
+      { name: "APIs REST", icon: "api" },
     ],
   },
 ];
