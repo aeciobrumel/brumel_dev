@@ -14,8 +14,11 @@
 }
 
 .dark.palette-esmeralda {
-  --accent: oklch(0.62 0.14 162);
-  --ring: oklch(0.58 0.13 162);
+  --primary: oklch(0.66 0.15 162);
+  --primary-foreground: oklch(0.16 0.03 165);
+  --accent: oklch(0.72 0.14 165);
+  --accent-foreground: oklch(0.16 0.03 165);
+  --ring: oklch(0.66 0.15 162);
 }
 
 .palette-ambar {
@@ -28,8 +31,10 @@
 }
 
 .dark.palette-ambar {
-  --primary: oklch(0.6 0.15 70);
+  --primary: oklch(0.78 0.15 78);
+  --primary-foreground: oklch(0.18 0.03 60);
   --secondary: oklch(0.5 0.13 65);
-  --accent: oklch(0.74 0.16 72);
-  --ring: oklch(0.7 0.15 70);
+  --accent: oklch(0.82 0.14 82);
+  --accent-foreground: oklch(0.18 0.03 60);
+  --ring: oklch(0.78 0.15 78);
 }

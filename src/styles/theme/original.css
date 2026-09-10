@@ -4,8 +4,10 @@
      secondary 18 48 96     #123060
      accent    46 105 190   #2E69BE
      tertiary  147 181 230  #93B5E6
-   Os azuis são idênticos em light/dark (como no applyPalette original);
-   só o fundo/superfície acompanham o tema. */
+   No LIGHT, os azuis ficam como no applyPalette original (escuros sobre fundo
+   claro). No DARK, primary/accent são CLAREADOS (senão `text-primary` some sobre
+   o fundo quase preto) e ganham foreground escuro para os botões preenchidos;
+   card/popover recebem um lift azulado para separar do fundo. */
 :root {
   --background: oklch(0.973 0.006 250);
   --foreground: oklch(0.21 0.04 260);
@@ -24,18 +26,28 @@
 }
 
 .dark {
-  --background: oklch(0.13 0.006 275);
-  --foreground: oklch(0.985 0 0);
+  --background: oklch(0.17 0.014 262);
+  --foreground: oklch(0.96 0.006 255);
 
-  --primary: oklch(0.373 0.108 258);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.316 0.093 259);
-  --secondary-foreground: oklch(0.985 0 0);
-  --accent: oklch(0.528 0.148 258);
-  --accent-foreground: oklch(0.985 0 0);
-  --ring: oklch(0.528 0.148 258);
+  --card: oklch(0.225 0.019 260);
+  --card-foreground: oklch(0.96 0.006 255);
+  --popover: oklch(0.225 0.019 260);
+  --popover-foreground: oklch(0.96 0.006 255);
 
-  --tertiary: oklch(0.766 0.08 258);
-  --surface: oklch(0.13 0.006 275);
-  --outline: rgba(255, 255, 255, 0.12);
+  --primary: oklch(0.62 0.152 254);
+  --primary-foreground: oklch(0.16 0.03 258);
+  --secondary: oklch(0.33 0.06 258);
+  --secondary-foreground: oklch(0.96 0.006 255);
+  --muted: oklch(0.26 0.018 258);
+  --muted-foreground: oklch(0.74 0.022 256);
+  --accent: oklch(0.7 0.142 250);
+  --accent-foreground: oklch(0.16 0.03 258);
+  --ring: oklch(0.62 0.152 254);
+
+  --border: oklch(1 0 0 / 13%);
+  --input: oklch(1 0 0 / 20%);
+
+  --tertiary: oklch(0.8 0.075 250);
+  --surface: oklch(0.17 0.014 262);
+  --outline: rgba(255, 255, 255, 0.16);
 }
