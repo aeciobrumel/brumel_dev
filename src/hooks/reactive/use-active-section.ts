@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export function useActiveSection(sectionIds: string[]) {
   const [activeId, setActiveId] = useState(sectionIds[0] ?? "");
-  const key = sectionIds.join("|");
+  const _key = sectionIds.join("|");
 
   useEffect(() => {
     if (sectionIds.length === 0) {
@@ -21,7 +21,7 @@ export function useActiveSection(sectionIds: string[]) {
           setActiveId(visible[0].target.id);
         }
       },
-      { threshold: 0.45, rootMargin: "-20% 0px -25% 0px" }
+      { rootMargin: "-20% 0px -25% 0px", threshold: 0.45 }
     );
 
     for (const id of sectionIds) {
@@ -33,7 +33,7 @@ export function useActiveSection(sectionIds: string[]) {
 
     return () => observer.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key]);
+  }, [sectionIds.length, sectionIds]);
 
   return activeId;
 }

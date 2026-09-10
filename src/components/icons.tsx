@@ -6,6 +6,7 @@ export {
   BuildingsIcon,
   CaretDownIcon,
   DeviceMobileIcon,
+  EnvelopeSimpleIcon as MailIcon,
   GithubLogoIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
@@ -20,4 +21,3 @@ export {
   TrayIcon,
   XIcon,
 } from "@phosphor-icons/react";
-export { EnvelopeSimpleIcon as MailIcon } from "@phosphor-icons/react";

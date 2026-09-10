@@ -8,12 +8,12 @@ import {
 
 /** slugs sem correspondência no simple-icons (removidos por política de marca, etc.) */
 const OVERRIDE: Record<string, Icon> = {
-  windows: WindowsLogoIcon,
-  windows11: WindowsLogoIcon,
-  openai: BrainIcon,
-  gpt: BrainIcon,
   ai: BrainIcon,
   api: PlugsConnectedIcon,
+  gpt: BrainIcon,
+  openai: BrainIcon,
+  windows: WindowsLogoIcon,
+  windows11: WindowsLogoIcon,
 };
 
 export function resolveSlugOverride(slug: string): Icon | null {

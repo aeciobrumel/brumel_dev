@@ -6,10 +6,7 @@ import { ContactForm } from "@/forms/contact";
 
 export function ContactSection() {
   return (
-    <section
-      className="scroll-mt-20 px-4 pt-16 pb-16 md:pt-20"
-      id="contact"
-    >
+    <section className="scroll-mt-20 px-4 pt-16 pb-16 md:pt-20" id="contact">
       <div className="mx-auto max-w-6xl">
         <SectionTitle
           description="Me chama para freelas, consultorias ou só trocar ideia sobre stack e arquitetura."

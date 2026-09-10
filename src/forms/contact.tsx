@@ -10,18 +10,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { buildContactMailto } from "@/lib/mailto";
 
 const schema = z.object({
-  name: z.string().trim().min(2, "Informe seu nome."),
   email: z
     .string()
     .trim()
     .refine((value) => validator.isEmail(value), "Email inválido."),
   message: z.string().trim().min(10, "Escreva ao menos 10 caracteres."),
+  name: z.string().trim().min(2, "Informe seu nome."),
 });
 
 type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
 
 export function ContactForm({ to }: { to: string }) {
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
+  const [values, setValues] = useState({ email: "", message: "", name: "" });
   const [errors, setErrors] = useState<FieldErrors>({});
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {

@@ -1,6 +1,6 @@
-export type Experience = {
-  title: string;
-  period: string;
+export interface Experience {
   description: string;
+  period: string;
   tags: string[];
-};
+  title: string;
+}

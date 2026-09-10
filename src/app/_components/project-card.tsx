@@ -1,10 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  ArrowSquareOutIcon,
-  GithubLogoIcon,
-} from "@/components/icons";
+import { ArrowSquareOutIcon, GithubLogoIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/types/project";
 

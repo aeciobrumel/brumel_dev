@@ -14,7 +14,10 @@ export function ExperienceList({ items }: { items: Experience[] }) {
     <>
       <div className="relative space-y-6 border-outline/60 border-l pl-6">
         {visible.map((item, index) => (
-          <AnimateOnScroll delay={index * 50} key={`${item.title}-${item.period}`}>
+          <AnimateOnScroll
+            delay={index * 50}
+            key={`${item.title}-${item.period}`}
+          >
             <ExperienceCard item={item} />
           </AnimateOnScroll>
         ))}

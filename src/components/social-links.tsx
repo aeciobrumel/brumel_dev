@@ -9,18 +9,18 @@ import { buildMailto } from "@/lib/mailto";
 import { cn } from "@/lib/utils";
 import type { SocialLinks as SocialLinksType } from "@/types/profile";
 
-type SocialLinksProps = {
-  links: SocialLinksType;
+interface SocialLinksProps {
   className?: string;
+  links: SocialLinksType;
   variant?: "solid" | "ghost";
-};
+}
 
-type Entry = {
-  key: string;
-  label: string;
+interface Entry {
   href: string;
   Icon: ComponentType<{ className?: string }>;
-};
+  key: string;
+  label: string;
+}
 
 export function SocialLinks({
   links,
@@ -28,24 +28,29 @@ export function SocialLinks({
   variant = "ghost",
 }: SocialLinksProps) {
   const entries: Entry[] = [
-    { key: "github", label: "GitHub", href: links.github, Icon: GithubLogoIcon },
     {
-      key: "linkedin",
-      label: "LinkedIn",
+      href: links.github,
+      Icon: GithubLogoIcon,
+      key: "github",
+      label: "GitHub",
+    },
+    {
       href: links.linkedin,
       Icon: LinkedinLogoIcon,
+      key: "linkedin",
+      label: "LinkedIn",
     },
     {
-      key: "instagram",
-      label: "Instagram",
       href: links.instagram,
       Icon: InstagramLogoIcon,
+      key: "instagram",
+      label: "Instagram",
     },
     {
-      key: "email",
-      label: "Email",
       href: buildMailto({ to: links.email }),
       Icon: MailIcon,
+      key: "email",
+      label: "Email",
     },
   ];
 

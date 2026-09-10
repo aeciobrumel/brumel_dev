@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type SectionTitleProps = {
+interface SectionTitleProps {
+  className?: string;
+  description?: ReactNode;
   kicker?: string;
   title: ReactNode;
-  description?: ReactNode;
-  className?: string;
   tone?: "default" | "onPrimary";
-};
+}
 
 export function SectionTitle({
   kicker,

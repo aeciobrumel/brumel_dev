@@ -1,17 +1,17 @@
 {
   "name": "brumel-portfolio",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "serve": "npx serve out",
     "check": "ultracite check",
+    "dev": "next dev --turbopack",
     "fix": "ultracite fix",
+    "prepare": "husky",
+    "serve": "npx serve out",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "prepare": "husky || true"
+    "test:watch": "vitest"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
@@ -37,7 +37,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.13",
+    "@biomejs/biome": "2.5.12",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^22.20.2",
     "@types/react": "^19.3.0",
@@ -47,7 +47,7 @@
     "lint-staged": "^17.5.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "ultracite": "^7.11.1",
+    "ultracite": "7.11.1",
     "vitest": "^5.0.0"
   }
 }

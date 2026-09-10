@@ -13,26 +13,26 @@ import {
   siVite,
 } from "simple-icons";
 
-export type SimpleIcon = {
-  title: string;
+export interface SimpleIcon {
   hex: string;
   path: string;
-};
+  title: string;
+}
 
 /** slug normalizado -> ícone do simple-icons */
 const SIMPLE_ICON_BY_SLUG: Record<string, SimpleIcon> = {
-  react: siReact,
-  typescript: siTypescript,
-  tailwindcss: siTailwindcss,
-  vite: siVite,
   bootstrap: siBootstrap,
-  laravel: siLaravel,
-  php: siPhp,
   docker: siDocker,
-  linux: siLinux,
-  github: siGithub,
   git: siGit,
+  github: siGithub,
+  laravel: siLaravel,
+  linux: siLinux,
   openapiinitiative: siOpenapiinitiative,
+  php: siPhp,
+  react: siReact,
+  tailwindcss: siTailwindcss,
+  typescript: siTypescript,
+  vite: siVite,
 };
 
 export function resolveSimpleIcon(slug: string): SimpleIcon | null {

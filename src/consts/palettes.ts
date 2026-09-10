@@ -11,7 +11,5 @@ export const PALETTE_IDS = PALETTES.map((palette) => palette.id) as PaletteId[];
 export const DEFAULT_PALETTE: PaletteId = "azul";
 
 export function isPaletteId(value: unknown): value is PaletteId {
-  return (
-    typeof value === "string" && PALETTE_IDS.includes(value as PaletteId)
-  );
+  return typeof value === "string" && PALETTE_IDS.includes(value as PaletteId);
 }

@@ -14,8 +14,12 @@ export const metadata: Metadata = {
   creator: "Aécio Brumel",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-blue.svg", type: "image/svg+xml", media: "(prefers-color-scheme: dark)" },
+      { type: "image/svg+xml", url: "/favicon.svg" },
+      {
+        media: "(prefers-color-scheme: dark)",
+        type: "image/svg+xml",
+        url: "/favicon-blue.svg",
+      },
     ],
     shortcut: "/favicon.svg",
   },
@@ -23,8 +27,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f4f8ff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0c0c11" },
+    { color: "#f4f8ff", media: "(prefers-color-scheme: light)" },
+    { color: "#0c0c11", media: "(prefers-color-scheme: dark)" },
   ],
 };
 

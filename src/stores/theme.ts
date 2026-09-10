@@ -5,17 +5,17 @@ import { persist } from "zustand/middleware";
 
 export type ThemeMode = "light" | "dark" | "system";
 
-type ThemeState = {
-  theme: ThemeMode;
+interface ThemeState {
   setTheme: (theme: ThemeMode) => void;
+  theme: ThemeMode;
   toggleTheme: () => void;
-};
+}
 
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
-      theme: "dark",
       setTheme: (theme) => set({ theme }),
+      theme: "dark",
       toggleTheme: () =>
         set({ theme: get().theme === "dark" ? "light" : "dark" }),
     }),

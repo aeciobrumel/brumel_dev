@@ -7,7 +7,7 @@ import { snippet } from "@/data/snippet";
 
 export function AboutSection() {
   const lines = profile.summary.filter(Boolean);
-  const motto = lines[0];
+  const [motto] = lines;
   const paragraphs = lines.slice(1, 4);
   const bullets = (profile.approach ?? []).filter(Boolean);
 

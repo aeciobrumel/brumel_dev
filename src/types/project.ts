@@ -1,15 +1,15 @@
-export type ProjectLinks = {
-  github: string;
-  demo?: string;
+export interface ProjectLinks {
   chrome?: string;
+  demo?: string;
   firefox?: string;
-};
+  github: string;
+}
 
-export type Project = {
-  title: string;
+export interface Project {
   description: string;
-  stack: string[];
   highlights: string[];
   image?: string;
   links: ProjectLinks;
-};
+  stack: string[];
+  title: string;
+}

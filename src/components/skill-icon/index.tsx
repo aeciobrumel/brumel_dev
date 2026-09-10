@@ -1,17 +1,17 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { resolveSimpleIcon } from "./resolve-simple-icon";
 import {
   FallbackSkillIcon,
   resolveSlugOverride,
 } from "./resolve-slug-override";
-import { resolveSimpleIcon } from "./resolve-simple-icon";
 
-type SkillIconProps = {
-  slug?: string;
-  label?: string;
+interface SkillIconProps {
   className?: string;
-};
+  label?: string;
+  slug?: string;
+}
 
 export function SkillIcon({ slug, label, className }: SkillIconProps) {
   const normalized = (slug ?? "").trim().toLowerCase();

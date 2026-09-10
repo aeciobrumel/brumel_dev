@@ -1,18 +1,20 @@
-export type MailtoInput = {
-  to: string;
-  subject?: string;
+export interface MailtoInput {
   body?: string;
-};
+  subject?: string;
+  to: string;
+}
 
+// mailto (RFC 6068) NÃO é form-encoded: espaço vira %20, não "+".
+// Por isso montamos a query com encodeURIComponent em vez de URLSearchParams.
 export function buildMailto({ to, subject, body }: MailtoInput): string {
-  const params = new URLSearchParams();
+  const parts: string[] = [];
   if (subject) {
-    params.set("subject", subject);
+    parts.push(`subject=${encodeURIComponent(subject)}`);
   }
   if (body) {
-    params.set("body", body);
+    parts.push(`body=${encodeURIComponent(body)}`);
   }
-  const query = params.toString();
+  const query = parts.join("&");
   return `mailto:${to.trim()}${query ? `?${query}` : ""}`;
 }
 
@@ -21,8 +23,8 @@ export function buildContactMailto(
   values: { name: string; email: string; message: string }
 ): string {
   return buildMailto({
-    to,
-    subject: `Contato do site — ${values.name}`,
     body: `${values.message}\n\n---\nNome: ${values.name}\nEmail: ${values.email}`,
+    subject: `Contato do site — ${values.name}`,
+    to,
   });
 }

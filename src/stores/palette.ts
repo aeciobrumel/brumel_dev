@@ -4,10 +4,10 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { DEFAULT_PALETTE, type PaletteId } from "@/consts/palettes";
 
-type PaletteState = {
+interface PaletteState {
   palette: PaletteId;
   setPalette: (palette: PaletteId) => void;
-};
+}
 
 export const usePaletteStore = create<PaletteState>()(
   persist(

@@ -14,7 +14,8 @@ export function PortfolioClient({ projects }: { projects: Project[] }) {
   const safePage = Math.min(page, totalPages - 1);
 
   const visible = useMemo(
-    () => projects.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE),
+    () =>
+      projects.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE),
     [projects, safePage]
   );
 
@@ -53,7 +54,8 @@ export function PortfolioClient({ projects }: { projects: Project[] }) {
                   ? "scale-125 bg-primary"
                   : "bg-primary/30 hover:bg-primary/50"
               )}
-              key={index}
+              // biome-ignore lint/suspicious/noArrayIndexKey: as bolinhas SÃO as páginas 0..n
+              key={`page-${index}`}
               onClick={() => setPage(index)}
               type="button"
             />

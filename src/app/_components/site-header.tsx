@@ -9,7 +9,7 @@ import {
   XIcon,
 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { HOME_SECTIONS, HOME_SECTION_IDS } from "@/consts/home-sections";
+import { HOME_SECTION_IDS, HOME_SECTIONS } from "@/consts/home-sections";
 import { profile } from "@/data/profile";
 import { useActiveSection } from "@/hooks/reactive/use-active-section";
 import { cn } from "@/lib/utils";
@@ -102,7 +102,11 @@ export function SiteHeader() {
             type="button"
             variant="ghost"
           >
-            {open ? <XIcon className="size-4" /> : <ListIcon className="size-4" />}
+            {open ? (
+              <XIcon className="size-4" />
+            ) : (
+              <ListIcon className="size-4" />
+            )}
           </Button>
         </div>
       </div>

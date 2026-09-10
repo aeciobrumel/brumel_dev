@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type TitleLinkProps = {
-  href: string;
-  label: string;
-  icon?: ReactNode;
+interface TitleLinkProps {
   className?: string;
   external?: boolean;
-};
+  href: string;
+  icon?: ReactNode;
+  label: string;
+}
 
 export function TitleLink({
   href,

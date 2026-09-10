@@ -1,14 +1,10 @@
 import type { ImpactContent } from "@/types/impact";
 
 export const impact: ImpactContent = {
-  kicker: "Impacto",
-  title: "Projetos com resultado real",
   description:
     "Trabalhos em que a tecnologia gerou uso prático, reconhecimento e alcance fora do código.",
   items: [
     {
-      title: "D'Boa: app para crise de ansiedade",
-      subtitle: "Aplicativo para crises de ansiedade e pânico",
       description:
         "App criado para ajudar pessoas em momentos de crise com um fluxo simples e direto de apoio.",
       highlights: [
@@ -17,13 +13,16 @@ export const impact: ImpactContent = {
         "Projeto reconhecido pelo impacto e pela aplicação clara da tecnologia.",
       ],
       links: [
-        { label: "Ver D'Boa", href: "https://dboa.com.br/" },
-        { label: "GitHub", href: "https://github.com/aeciobrumel/Dboa_app_BETA" },
+        { href: "https://dboa.com.br/", label: "Ver D'Boa" },
+        {
+          href: "https://github.com/aeciobrumel/Dboa_app_BETA",
+          label: "GitHub",
+        },
       ],
+      subtitle: "Aplicativo para crises de ansiedade e pânico",
+      title: "D'Boa: app para crise de ansiedade",
     },
     {
-      title: "Documentário: tecnologia em projeto cultural",
-      subtitle: "Participação em projeto audiovisual/documental",
       description:
         "Participação em um projeto que conectou tecnologia, pesquisa e produção cultural.",
       highlights: [
@@ -33,14 +32,18 @@ export const impact: ImpactContent = {
       ],
       links: [
         {
-          label: "Ver reportagem",
           href: "https://noticiasdaaldeia.com.br/documentario-do-atlantico-ao-pacifico-uma-jornada-cientifica-acompanha-estudantes-gauchos-em-premiacao-internacional/",
+          label: "Ver reportagem",
         },
         {
-          label: "Ver documentário",
           href: "https://www.youtube.com/watch?v=aQW72T84mcs",
+          label: "Ver documentário",
         },
       ],
+      subtitle: "Participação em projeto audiovisual/documental",
+      title: "Documentário: tecnologia em projeto cultural",
     },
   ],
+  kicker: "Impacto",
+  title: "Projetos com resultado real",
 };

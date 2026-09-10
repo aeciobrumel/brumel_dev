@@ -8,8 +8,8 @@
   }
 
   ::selection {
-    background: rgba(124, 255, 225, 0.2);
     color: inherit;
+    background: rgba(124, 255, 225, 0.2);
   }
 
   a {

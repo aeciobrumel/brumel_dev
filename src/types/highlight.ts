@@ -1,7 +1,7 @@
 export type HighlightIcon = "architecture" | "responsive" | "delivery";
 
-export type Highlight = {
-  title: string;
+export interface Highlight {
   description: string;
   icon: HighlightIcon;
-};
+  title: string;
+}

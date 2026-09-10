@@ -1,6 +1,6 @@
 @utility container {
-  margin-inline: auto;
   padding-inline: 1rem;
+  margin-inline: auto;
 
   @variant sm {
     padding-inline: 1.5rem;
@@ -28,9 +28,9 @@
 
 /* legado: `.card` usado em sections/Contact */
 @utility card {
-  border-radius: 1rem;
-  border: 1px solid color-mix(in oklab, var(--outline) 80%, transparent);
-  background-color: color-mix(in oklab, var(--card) 92%, transparent);
   padding: 1rem;
+  background-color: color-mix(in oklab, var(--card) 92%, transparent);
+  border: 1px solid color-mix(in oklab, var(--outline) 80%, transparent);
+  border-radius: 1rem;
   backdrop-filter: blur(8px);
 }

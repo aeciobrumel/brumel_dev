@@ -1,7 +1,7 @@
-export type HomeSection = {
+export interface HomeSection {
   id: string;
   label: string;
-};
+}
 
 /** Ordem e rótulos do menu; `id` casa com o id da <section> renderizada em page.tsx. */
 export const HOME_SECTIONS: HomeSection[] = [

@@ -1,19 +1,19 @@
-export type ImpactLink = {
-  label: string;
+export interface ImpactLink {
   href: string;
-};
+  label: string;
+}
 
-export type ImpactItem = {
-  title: string;
-  subtitle?: string;
+export interface ImpactItem {
   description: string;
   highlights: string[];
   links?: ImpactLink[];
-};
-
-export type ImpactContent = {
-  kicker: string;
+  subtitle?: string;
   title: string;
+}
+
+export interface ImpactContent {
   description: string;
   items: ImpactItem[];
-};
+  kicker: string;
+  title: string;
+}

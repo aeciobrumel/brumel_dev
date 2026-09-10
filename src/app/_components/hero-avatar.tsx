@@ -3,12 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { resolveTheme, useThemeStore } from "@/stores/theme";
 
-type HeroAvatarProps = {
-  src: string;
-  srcDark?: string;
+interface HeroAvatarProps {
   alt: string;
   name: string;
-};
+  src: string;
+  srcDark?: string;
+}
 
 export function HeroAvatar({ src, srcDark, alt, name }: HeroAvatarProps) {
   const theme = useThemeStore((state) => state.theme);

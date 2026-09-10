@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 
-type CodeSnippetProps = {
-  title?: string;
-  lines: string[];
+interface CodeSnippetProps {
   className?: string;
-};
+  lines: string[];
+  title?: string;
+}
 
 export function CodeSnippet({
   title = "stack.ts",

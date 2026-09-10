@@ -4,11 +4,11 @@ import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type AnimateOnScrollProps = {
+interface AnimateOnScrollProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-};
+}
 
 export function AnimateOnScroll({
   children,
@@ -23,20 +23,20 @@ export function AnimateOnScroll({
       initial={
         reduceMotion
           ? false
-          : { opacity: 0, x: 32, scale: 0.99, filter: "blur(4px)" }
+          : { filter: "blur(4px)", opacity: 0, scale: 0.99, x: 32 }
       }
       transition={
         reduceMotion
           ? { duration: 0 }
           : {
-              duration: 0.36,
               delay: delay / 1000,
+              duration: 0.36,
               ease: [0.22, 1, 0.36, 1],
             }
       }
-      viewport={{ once: false, amount: 0.18, margin: "0px 0px -5% 0px" }}
+      viewport={{ amount: 0.18, margin: "0px 0px -5% 0px", once: false }}
       whileInView={
-        reduceMotion ? {} : { opacity: 1, x: 0, scale: 1, filter: "blur(0px)" }
+        reduceMotion ? {} : { filter: "blur(0px)", opacity: 1, scale: 1, x: 0 }
       }
     >
       {children}

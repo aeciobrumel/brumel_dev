@@ -3,18 +3,18 @@ import Link from "next/link";
 import { generateSEO } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEO({
-  title: "Políticas de privacidade",
   description:
     "Documentos públicos de privacidade e uso de dados dos projetos de Aécio Brumel.",
   path: "/politica-privacidade/",
+  title: "Políticas de privacidade",
 });
 
 const policies = [
   {
-    name: "Cola do Dev",
-    path: "/cola-do-dev/",
     description:
       "Política de privacidade e uso de dados da extensão Chrome voltada para armazenamento local de snippets.",
+    name: "Cola do Dev",
+    path: "/cola-do-dev/",
   },
 ];
 
