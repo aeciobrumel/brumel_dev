@@ -1,0 +1,41 @@
+/* Paleta "azul" — a identidade atual do brumel_dev, convertida de RGB para OKLCH.
+   RGB de origem (src/data/theme.ts do Vite):
+     primary   22 63 120   #163F78
+     secondary 18 48 96     #123060
+     accent    46 105 190   #2E69BE
+     tertiary  147 181 230  #93B5E6
+   Os azuis são idênticos em light/dark (como no applyPalette original);
+   só o fundo/superfície acompanham o tema. */
+:root {
+  --background: oklch(0.973 0.006 250);
+  --foreground: oklch(0.21 0.04 260);
+
+  --primary: oklch(0.373 0.108 258);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.316 0.093 259);
+  --secondary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.528 0.148 258);
+  --accent-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.528 0.148 258);
+
+  --tertiary: oklch(0.766 0.08 258);
+  --surface: oklch(0.13 0.006 275);
+  --outline: rgba(15, 23, 42, 0.12);
+}
+
+.dark {
+  --background: oklch(0.13 0.006 275);
+  --foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.373 0.108 258);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.316 0.093 259);
+  --secondary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.528 0.148 258);
+  --accent-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.528 0.148 258);
+
+  --tertiary: oklch(0.766 0.08 258);
+  --surface: oklch(0.13 0.006 275);
+  --outline: rgba(255, 255, 255, 0.12);
+}

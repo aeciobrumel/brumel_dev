@@ -1,0 +1,18 @@
+/* Tokens de status (sucesso / aviso / info) — usados por toasts e feedback. */
+:root {
+  --success: oklch(0.62 0.16 150);
+  --success-foreground: oklch(0.985 0 0);
+  --warning: oklch(0.75 0.16 80);
+  --warning-foreground: oklch(0.21 0.04 60);
+  --info: oklch(0.6 0.13 240);
+  --info-foreground: oklch(0.985 0 0);
+}
+
+@theme inline {
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+}

@@ -1,0 +1,26 @@
+:root {
+  --layout-header-height: 4rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: rgba(124, 255, 225, 0.2);
+    color: inherit;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  .dark .logo-adaptive {
+    filter: invert(1);
+  }
+}
