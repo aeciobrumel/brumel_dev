@@ -10,6 +10,7 @@ export const HOME_SECTIONS: HomeSection[] = [
   { id: "skills", label: "Skills" },
   { id: "impact", label: "Impacto" },
   { id: "experience", label: "Experiência" },
+  { id: "partners", label: "Parceiros" },
   { id: "contact", label: "Contato" },
 ];
 

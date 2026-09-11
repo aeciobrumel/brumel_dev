@@ -29,6 +29,8 @@ jobs:
 
       - name: Build
         run: npm run build # Next.js output:"export" gera ./out
+        env:
+          GH_CONTRIBUTIONS_TOKEN: ${{ secrets.GH_CONTRIBUTIONS_TOKEN }}
 
       - name: Normalize FTP connection settings
         env:

@@ -8,6 +8,7 @@ export {
   DeviceMobileIcon,
   EnvelopeSimpleIcon as MailIcon,
   GithubLogoIcon,
+  GlobeIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
   ListIcon,

@@ -1,7 +1,7 @@
 # Guia de Frontend — Padrões e Tecnologias
 
 > Documento norteador para iniciar **qualquer** projeto novo de frontend seguindo as
-> boas práticas destiladas do projeto `yagrrusso.github.io`.
+> boas práticas 
 > Copie este arquivo para a raiz do novo repositório e adapte o que não se aplicar.
 >
 > Regra de ouro do projeto de referência: **todo artefato de código (nomes, comentários,

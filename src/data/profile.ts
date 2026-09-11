@@ -9,8 +9,7 @@ export const profile: Profile = {
   ],
   availability: "freelas",
   avatarAlt: "Foto de perfil de Aécio Brumel",
-  avatarUrl: "/images/profile-d.jpeg",
-  avatarUrlDark: "/images/profile.jpg",
+  avatarUrl: "https://avatars.githubusercontent.com/u/88293649?v=4",
   headline: "Laravel, React, TypeScript, Docker",
   links: {
     email: "aeciobrumelms@gmail.com",
