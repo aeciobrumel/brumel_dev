@@ -24,3 +24,21 @@
     filter: invert(1);
   }
 }
+
+/* Ripple theme transition (View Transitions API).
+   O snapshot novo é revelado por um círculo que cresce a partir do toggle de tema;
+   o blur (aplicado via WAAPI em app/_components/theme-toggle.tsx) dá o efeito de onda.
+   Sem suporte (ex.: Firefox) ou com prefers-reduced-motion, o tema troca sem animação. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}

@@ -44,6 +44,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         {/* biome-ignore lint/security/noDangerouslySetInnerHtml: script anti-FOUC síncrono */}
         <script dangerouslySetInnerHTML={{ __html: ANTI_FOUC }} />
+        {process.env.NODE_ENV === "development" && (
+          <script async src="https://tweakcn.com/live-preview.min.js" />
+        )}
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <LayoutClient>{children}</LayoutClient>
