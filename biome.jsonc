@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/next",
+    "ultracite/biome/react",
+    "ultracite/biome/vitest"
+  ],
+  "linter": {
+    "rules": {
+      "performance": {
+        // inline arrows em props de JSX: padrão comum em React; não vale a
+        // penalidade de useCallback num site estático pequeno
+        "noJsxPropsBind": "off",
+        // barris pequenos e intencionais (components/icons, skill-icon)
+        "noBarrelFile": "off"
+      },
+      "correctness": {
+        // <img> com dimensões controladas por CSS (static export; next/image
+        // unoptimized não traria ganho)
+        "useImageSize": "off"
+      },
+      "a11y": {
+        // onError em <img> não é interação de usuário
+        "noNoninteractiveElementInteractions": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      // assets estáticos e saída de build não são código-fonte
+      "includes": ["public/**", "out/**"],
+      "linter": { "enabled": false },
+      "formatter": { "enabled": false },
+      "assist": { "enabled": false }
+    }
+  ]
+}

@@ -1,60 +1,44 @@
-# Portfólio Reutilizável
+# brumel_dev
 
-Template de portfólio pessoal reutilizável e fácil de personalizar, pensado para destacar projetos, habilidades e contatos, construído com React e Vite, usando TypeScript e Tailwind CSS.
+Portfólio pessoal de Aécio Brumel. Site **estático** (sem backend), pt-BR.
 
-![version](https://img.shields.io/badge/version-0.1.0-blue)
 ![status](https://img.shields.io/badge/status-in%20development-yellow)
-![license](https://img.shields.io/badge/license-not%20specified-lightgrey)
-![vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![react](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+![next](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![react](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![typescript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?logo=tailwind-css&logoColor=white)
 
-## Sumário
+## Stack
 
-- [Guia de Instalação](#guia-de-instalacao)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Scripts](#scripts)
-- [Contribuição](#contribuicao)
-- [Licença](#licenca)
+- **Next.js 16** — App Router, `output: "export"` (build gera `out/`)
+- **React 19** + **TypeScript** strict
+- **Tailwind CSS v4** CSS-first (sem `tailwind.config`) + **shadcn/ui** (new-york, ícones Phosphor)
+- **Zustand** (tema claro/escuro + troca de paleta em runtime) + `motion`
+- **Biome / Ultracite** (lint + format), **Husky** + lint-staged, **Vitest**
+- Conteúdo em `src/data/*`, lido por Server Components
+- Deploy: FTP → Hostinger (`out/`)
 
-## Guia de Instalação
+## Instalação
 
-1. Clone o repositório.
-2. Instale as dependências:
-    ```bash
-    npm install
-    ```
-3. Inicie o ambiente de desenvolvimento:
-    ```bash
-    npm run dev
-    ```
-4. (Opcional) Gere o build de produção e visualize localmente:
-    ```bash
-    npm run build
-    npm run preview
-    ```
-
-## Tecnologias Utilizadas
-
-- React
-- React DOM
-- Vite
-- TypeScript
-- Tailwind CSS
-- PostCSS
-- Autoprefixer
+```bash
+npm install
+npm run dev          # servidor de desenvolvimento (Turbopack)
+```
 
 ## Scripts
 
-- `npm run dev` — inicia o servidor de desenvolvimento com Vite.
-- `npm run build` — gera o build de produção.
-- `npm run preview` — serve o build gerado para validação local.
-- `npm run lint` — exibe uma mensagem informando que o lint não está configurado.
+- `npm run dev` — desenvolvimento
+- `npm run build` — build de produção (gera `out/`)
+- `npm run serve` — serve `out/` localmente (`next start` NÃO funciona com `output: export`)
+- `npm run check` / `npm run fix` — lint/format (Ultracite)
+- `npm run test` / `npm run test:watch` — testes (Vitest)
 
-## Contribuição
+## Documentação
 
-1. Faça um fork do projeto.
-2. Crie uma branch com sua feature ou correção (`git checkout -b minha-feature`).
-3. Faça commits claros e objetivos.
-4. Envie o PR descrevendo o que mudou e o porquê.
+- [`AGENTS.md`](./AGENTS.md) — router de contexto + padrões de código
+- [`agents/overview.md`](./agents/overview.md) — arquitetura, convenções, gotchas
+- [`docs/migracao-yagrrusso.md`](./docs/migracao-yagrrusso.md) — histórico da migração Vite → Next.js
+
+## Ambiente
+
+`NEXT_PUBLIC_SITE_URL` (opcional) — URL pública usada em SEO/canonical/sitemap. Ver `.env.example`.
