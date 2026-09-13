@@ -9,16 +9,19 @@ export function HeroSection() {
   return (
     <section className="scroll-mt-20 px-4 pt-24 pb-14 md:pt-28" id="hero">
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-center">
-        <div className="space-y-5">
+        <div className="order-2 space-y-5 md:order-1">
           <p className="font-medium text-muted-foreground text-sm">
             Olá, eu sou {profile.name}
           </p>
-          <h1 className="font-semibold text-3xl text-foreground leading-tight md:text-4xl">
-            {profile.role}
+          <h1 className="font-bold text-5xl text-foreground leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
+            <span className="text-primary">Desenvolvedor</span>{" "}
+            <span className="font-display font-normal text-[1.1em] italic">
+              Full Stack
+            </span>
           </h1>
-          <p className="max-w-xl text-muted-foreground text-sm">
-            Desenvolvedor Full Stack focado em React, TypeScript e Laravel.
-            Entrego soluções claras, rápidas e fáceis de manter.
+          <p className="max-w-xl text-base text-muted-foreground">
+            Focado em React, TypeScript e Laravel. Entrego soluções claras,
+            rápidas e fáceis de manter.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -37,7 +40,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="flex w-full justify-center md:justify-end">
+        <div className="order-1 flex w-full justify-center md:order-2 md:justify-end">
           <Card className="inline-flex items-center justify-center p-3 sm:p-4 md:p-5">
             <CardContent className="p-0">
               <HeroAvatar

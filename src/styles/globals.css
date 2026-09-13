@@ -6,6 +6,8 @@
 @import "./theme/index.css";
 @import "./base.css";
 
+@custom-variant dark (&:is(.dark *));
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -13,5 +15,27 @@
 
   body {
     @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
   }
 }

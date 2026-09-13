@@ -54,7 +54,7 @@ export function PartnerLinks({ links, className }: PartnerLinksProps) {
       {entries.map(({ key, label, href, Icon }) => (
         <a
           aria-label={label}
-          className="inline-flex size-8 items-center justify-center rounded-md border border-outline/60 transition hover:border-accent hover:text-accent"
+          className="inline-flex size-8 items-center justify-center rounded-md border border-border/60 transition hover:border-accent hover:text-accent"
           href={href}
           key={key}
           rel="noopener noreferrer"

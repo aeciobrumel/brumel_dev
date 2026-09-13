@@ -21,9 +21,9 @@ const policies = [
 export default function PrivacyPoliciesPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-20">
-      <section className="w-full rounded-[2rem] border border-outline/60 bg-card p-8 shadow-sm sm:p-12">
+      <section className="w-full rounded-[2rem] border border-border/60 bg-card p-8 shadow-sm sm:p-12">
         <Link
-          className="inline-flex rounded-full border border-outline/60 px-4 py-2 font-medium text-muted-foreground text-sm transition hover:border-accent hover:text-accent"
+          className="inline-flex rounded-full border border-border/60 px-4 py-2 font-medium text-muted-foreground text-sm transition hover:border-accent hover:text-accent"
           href="/"
         >
           Voltar ao site
@@ -45,7 +45,7 @@ export default function PrivacyPoliciesPage() {
         <div className="mt-10 grid gap-4">
           {policies.map((policy) => (
             <Link
-              className="group rounded-3xl border border-outline/60 bg-background/50 p-6 transition hover:-translate-y-0.5 hover:border-accent/60"
+              className="group rounded-3xl border border-border/60 bg-background/50 p-6 transition hover:-translate-y-0.5 hover:border-accent/60"
               href={policy.path}
               key={policy.path}
             >

@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_PALETTE, PALETTE_IDS } from "@/consts/palettes";
 import { experiences } from "@/data/experiences";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
@@ -25,9 +24,5 @@ describe("dados estáticos", () => {
   it("experiências e skills não estão vazias", () => {
     expect(experiences.length).toBeGreaterThan(0);
     expect(skills.length).toBeGreaterThan(0);
-  });
-
-  it("paleta padrão é válida", () => {
-    expect(PALETTE_IDS).toContain(DEFAULT_PALETTE);
   });
 });

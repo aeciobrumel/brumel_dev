@@ -50,7 +50,7 @@ export async function ContactSection() {
         </div>
 
         {contributions ? (
-          <div className="mt-10 border-outline/50 border-t pt-8">
+          <div className="mt-10 border-border/50 border-t pt-8">
             <GithubContributionGraph contributions={contributions} />
           </div>
         ) : null}

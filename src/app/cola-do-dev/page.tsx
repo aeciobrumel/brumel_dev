@@ -65,10 +65,10 @@ const sections = [
 export default function ColaDoDevPrivacyPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-20">
-      <section className="rounded-[2rem] border border-outline/60 bg-card p-8 shadow-sm sm:p-12">
+      <section className="rounded-[2rem] border border-border/60 bg-card p-8 shadow-sm sm:p-12">
         <div className="flex flex-wrap items-center gap-3">
           <Link
-            className="inline-flex rounded-full border border-outline/60 px-4 py-2 font-medium text-muted-foreground text-sm transition hover:border-accent hover:text-accent"
+            className="inline-flex rounded-full border border-border/60 px-4 py-2 font-medium text-muted-foreground text-sm transition hover:border-accent hover:text-accent"
             href="/politica-privacidade/"
           >
             Voltar
@@ -95,7 +95,7 @@ export default function ColaDoDevPrivacyPage() {
         <div className="mt-10 space-y-5">
           {sections.map((section) => (
             <article
-              className="rounded-3xl border border-outline/60 bg-background/50 p-6"
+              className="rounded-3xl border border-border/60 bg-background/50 p-6"
               key={section.title}
             >
               <h2 className="font-semibold text-foreground text-xl">

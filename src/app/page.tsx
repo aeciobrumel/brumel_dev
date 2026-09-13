@@ -1,4 +1,3 @@
-import { AboutSection } from "@/app/_components/sections/about-section";
 import { ContactSection } from "@/app/_components/sections/contact-section";
 import { ExperienceSection } from "@/app/_components/sections/experience-section";
 import { HeroSection } from "@/app/_components/sections/hero-section";
@@ -6,7 +5,6 @@ import { ImpactSection } from "@/app/_components/sections/impact-section";
 import { PartnersSection } from "@/app/_components/sections/partners-section";
 import { PortfolioSection } from "@/app/_components/sections/portfolio-section";
 import { SkillsSection } from "@/app/_components/sections/skills-section";
-import { Separator } from "@/components/ui/separator";
 import { SITE_URL } from "@/consts/seo";
 import { profile } from "@/data/profile";
 
@@ -42,10 +40,8 @@ export default function HomePage() {
         type="application/ld+json"
       />
       <HeroSection />
-      <Separator className="mx-auto max-w-6xl opacity-60" />
-      <AboutSection />
-      <SkillsSection />
       <PortfolioSection />
+      <SkillsSection />
       <ImpactSection />
       <ExperienceSection />
       <PartnersSection />

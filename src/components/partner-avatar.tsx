@@ -33,7 +33,7 @@ export function PartnerAvatar({
     [name]
   );
 
-  const shell = "size-16 rounded-xl border border-outline/10 object-cover";
+  const shell = "size-16 rounded-xl border border-border/10 object-cover";
 
   if (!src || errored) {
     return (

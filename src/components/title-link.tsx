@@ -20,7 +20,7 @@ export function TitleLink({
     <a
       aria-label={label}
       className={cn(
-        "group inline-flex items-center gap-2 rounded-xl border border-outline/50 bg-card/80 px-3 py-2 font-medium text-sm shadow-sm transition-colors hover:border-accent hover:text-accent",
+        "group inline-flex items-center gap-2 rounded-xl border border-border/50 bg-card/80 px-3 py-2 font-medium text-sm shadow-sm transition-colors hover:border-accent hover:text-accent",
         className
       )}
       href={href}

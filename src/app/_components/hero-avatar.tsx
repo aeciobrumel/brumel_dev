@@ -36,7 +36,7 @@ export function HeroAvatar({ src, srcDark, alt, name }: HeroAvatarProps) {
   );
 
   const shell =
-    "size-32 rounded-2xl border border-outline/10 object-cover object-top shadow-2xl ring-8 ring-accent/35 sm:size-40 md:size-52";
+    "size-32 rounded-2xl border border-border/10 object-cover object-top shadow-2xl ring-8 ring-accent/35 sm:size-40 md:size-52";
 
   if (errored) {
     return (

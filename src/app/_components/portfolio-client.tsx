@@ -5,7 +5,7 @@ import { ProjectCard } from "@/app/_components/project-card";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/types/project";
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 3;
 const AUTOPLAY_MS = 12_000;
 
 export function PortfolioClient({ projects }: { projects: Project[] }) {

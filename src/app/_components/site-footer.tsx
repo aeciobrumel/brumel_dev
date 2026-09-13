@@ -6,7 +6,7 @@ export function SiteFooter() {
   ).getFullYear();
 
   return (
-    <footer className="border-outline/50 border-t py-4">
+    <footer className="border-border/50 border-t py-4">
       <div className="mx-auto max-w-6xl px-4">
         <p className="text-muted-foreground text-xs">
           © {buildYear} {profile.name}. Todos os direitos reservados.

@@ -23,15 +23,15 @@ export function ProjectCard({
   return (
     <article
       className={cn(
-        "flex h-full flex-col overflow-hidden rounded-xl border border-outline/50 bg-card shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40",
+        "flex h-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40",
         featured ? "" : "min-h-[20rem]"
       )}
     >
-      <div className="overflow-hidden border-outline/40 border-b bg-[#111827]">
+      <div className="overflow-hidden border-border/40 border-b bg-muted">
         {/* biome-ignore lint/performance/noImgElement: static export */}
         <img
           alt={`Prévia do projeto ${project.title}`}
-          className="aspect-[16/9] w-full bg-[#111827] object-contain object-center"
+          className="aspect-[16/9] w-full bg-muted object-contain object-center"
           loading="lazy"
           onError={() => setImgSrc(PLACEHOLDER)}
           src={imgSrc}
@@ -94,7 +94,7 @@ export function ProjectCard({
           {project.links.github ? (
             <a
               aria-label={`GitHub — ${project.title}`}
-              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-outline/60 px-4 font-semibold text-foreground text-sm transition-colors hover:border-accent hover:text-accent"
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-border/60 px-4 font-semibold text-foreground text-sm transition-colors hover:border-accent hover:text-accent"
               href={project.links.github}
               rel="noopener noreferrer"
               target="_blank"

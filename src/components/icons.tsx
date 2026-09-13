@@ -14,7 +14,6 @@ export {
   ListIcon,
   MapPinIcon,
   MoonIcon,
-  PaletteIcon,
   RocketLaunchIcon,
   SparkleIcon,
   SunIcon,

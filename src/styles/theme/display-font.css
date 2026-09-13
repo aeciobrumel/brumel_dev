@@ -1,0 +1,7 @@
+/* Serifa de display usada nos destaques do hero (estilo tweakcn.com).
+   Fica fora de tokens.css para não ser sobrescrita ao colar um tema novo;
+   a fonte é baixada pelo <link> do Google Fonts em app/layout.tsx. */
+@theme inline {
+  --font-display:
+    "Instrument Serif", var(--font-serif), ui-serif, Georgia, serif;
+}

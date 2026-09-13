@@ -12,7 +12,7 @@ export function ExperienceList({ items }: { items: Experience[] }) {
 
   return (
     <>
-      <div className="relative space-y-6 border-outline/60 border-l pl-6">
+      <div className="relative space-y-6 border-border/60 border-l pl-6">
         {visible.map((item, index) => (
           <AnimateOnScroll
             delay={index * 50}

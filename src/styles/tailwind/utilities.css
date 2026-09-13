@@ -30,7 +30,7 @@
 @utility card {
   padding: 1rem;
   background-color: color-mix(in oklab, var(--card) 92%, transparent);
-  border: 1px solid color-mix(in oklab, var(--outline) 80%, transparent);
+  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
   border-radius: 1rem;
   backdrop-filter: blur(8px);
 }

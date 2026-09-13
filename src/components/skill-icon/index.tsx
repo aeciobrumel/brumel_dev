@@ -11,9 +11,10 @@ interface SkillIconProps {
   className?: string;
   label?: string;
   slug?: string;
+  style?: React.CSSProperties;
 }
 
-export function SkillIcon({ slug, label, className }: SkillIconProps) {
+export function SkillIcon({ slug, label, className, style }: SkillIconProps) {
   const normalized = (slug ?? "").trim().toLowerCase();
 
   const simpleIcon = normalized ? resolveSimpleIcon(normalized) : null;
@@ -25,6 +26,7 @@ export function SkillIcon({ slug, label, className }: SkillIconProps) {
         className={cn("size-4", className)}
         fill="currentColor"
         role={label ? "img" : undefined}
+        style={style}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -42,6 +44,7 @@ export function SkillIcon({ slug, label, className }: SkillIconProps) {
       aria-hidden={label ? undefined : true}
       aria-label={label}
       className={cn("size-4", className)}
+      style={style}
       weight="regular"
     />
   );
