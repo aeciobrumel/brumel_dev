@@ -13,11 +13,16 @@ describe("dados estáticos", () => {
     expect(profile.links.github).toMatch(IS_HTTPS);
   });
 
-  it("todo projeto tem título e link de github", () => {
+  it("todo projeto tem título e ao menos um link", () => {
     expect(projects.length).toBeGreaterThan(0);
     for (const project of projects) {
       expect(project.title).not.toBe("");
-      expect(project.links.github).toMatch(IS_HTTPS);
+
+      const urls = Object.values(project.links).filter(Boolean);
+      expect(urls.length).toBeGreaterThan(0);
+      for (const url of urls) {
+        expect(url).toMatch(IS_HTTPS);
+      }
     }
   });
 

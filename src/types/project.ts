@@ -2,7 +2,7 @@ export interface ProjectLinks {
   chrome?: string;
   demo?: string;
   firefox?: string;
-  github: string;
+  github?: string;
 }
 
 export interface Project {
